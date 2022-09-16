@@ -13,6 +13,7 @@
 }
 .container{
     border-radius: 15px;
+    width: 1200px;
     background-color: chartreuse;
 }
 .profile{
@@ -45,14 +46,18 @@
     background-color:rgb(184, 170, 90);
 }
 .about-me{
-    display: flex;
-    width: 550px;
-    height:240px
+    display:flex;
+    width: 1200px;
+    height:300px;
+    background-color: aliceblue;
 }
 .about-me-title{
-    padding:30px 30px 30px 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+    width: 500px;
 }
 .about-me-des{
+    width: 500px;
     height: 240px;
 }
 .fa-facebook{
