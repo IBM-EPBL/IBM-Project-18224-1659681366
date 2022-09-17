@@ -17,4 +17,3 @@ def signin():
 @app.route("/about")
 def about():
     return render_template("home.html")
-app.run(debug=True)
