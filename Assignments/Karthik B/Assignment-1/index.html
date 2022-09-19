@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="html2pdf.bundle.min.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script>
+    	function down(){
+		const saves=document.getElementById("savepage");
+		html2pdf().from(saves).save();
+}
+    </script>
+</head>
+<body>
+    <div class="save">
+        <button type="button" onclick="down()">Download</button>
+    </div>
+    <div class="hireme">
+        <button type="button">Hire Me</button>
+    </div>
+    <div class="container" id="savepage">
+        <div class="left_side">
+            <div class="profile">
+                <div class="image">
+                    <img src="css/dp.jpg">
+                </div>
+                <h2 style="color:white ;">Karthik B<br><span></span></h2>
+            </div>
+            <div class="contact">&nbsp;
+                <h3>Contact Info</h3>&nbsp;
+                <div class="list">
+                <ul>
+                    <i class="fa-solid fa-envelope" style="color: blue;"><span style="color: white;">&nbsp;&nbsp;2k19cse038@kiot.ac.in</span></i>
+                </ul>
+                <ul>
+                    <a href="#"><i class="fa-brands fa-linkedin" style="color: blue;"><span style="color: white;">&nbsp;&nbsp;Karthik B</span></i></a>
+                </ul>
+                <ul>
+                    <i class="fa-solid fa-phone" style="color: blue;"><span style="color: white;">&nbsp;&nbsp;9597026775</span></i>
+                </ul>
+                <ul>
+                    <i class="fa-solid fa-location-dot" style="color: blue;"><span style="color: white;">&nbsp;&nbsp;Tamil Nadu, India</span></i>
+                </ul>&nbsp;
+                </div>
+            </div>
+            <div class="objective">
+                <h3>Profile</h3>&nbsp;
+                    <p>Seeking a challenging position in a reputed organization where 
+                    I can learn new skills, expand my knowledge, and leverage my learnings and also where 
+                    I can make the best of my potential and contribute to the organization’s growth</p>
+            </div>&nbsp;
+            <div class="education">
+                <h3>Education</h3>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-graduation-cap" style="color:coral;"><span style="color: coral;">&nbsp;B.E., C.S.E.</span></i>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Knowledge Institute of Technology</span></i>
+                    <i class="fa-solid fa-arrow-right"><span style>&nbsp;8.1 CGPA till 5th Semester</span></i>
+                    <i class="fa-solid fa-arrow-right"><span style>&nbsp;2019-2023</span></i>                    
+                </ul>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-school" style="color:coral;"><span style="color: coral;">&nbsp;H.S.C.</span></i>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;SRK MHSS</span></i>
+                    <i class="fa-solid fa-arrow-right"><span style>&nbsp;67.9%</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span style>&nbsp;2015-2017</span></i>                    
+                </ul>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-school" style="color:coral;"><span style="color: coral;">&nbsp;S.S.L.C.</span></i>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;St. John's MHSS</span></i>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;90.5%</span></i>&nbsp;<br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;2014-2015</span></i>&nbsp;
+                </ul>
+            </div>
+        </div>
+
+        <div class="right_side">
+            <div class="skills">
+                <h3>Tech Skills</h3>&nbsp;
+                <ul>
+                    <i class="fa-brands fa-java"><span>&nbsp;Java Language</span></i><br>
+                    <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>
+                <ul>
+                <span>&copy;&nbsp;C Language</span><br>
+                <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>
+                <ul>
+                    <i class="fa-brands fa-html5"><span>&nbsp;HTML</span></i><br>
+                    <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>
+                <ul>
+                    <i class="fa-brands fa-css3-alt"><span>&nbsp;CSS</span></i><br>
+                    <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>
+                <ul>
+                    <i class="fa-brands fa-js"></i><span>&nbsp;JavaScript</span></i><br>
+                    <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>&nbsp;
+            </div>
+            <div class="certificates">
+                <h3>Certificates</h3>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Cybersecurity Essentials</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Introduction to Cybersecurity</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Rpa Automation</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;AI Automation</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Introduction to Packet Tracer</span></i><br>
+                </ul>&nbsp;
+            </div>
+            <div class="internship">
+                <h3>Internship</h3><br>
+                <i class="fa-solid fa-arrow-right"><span style="text-transform:uppercase">&nbsp;Cisco Cybersecurity Internship</span></i><br><br>
+                <p>Completed a Cybersecurity Virtual Internship on making a
+                    Network Infrastructure for our
+                    College Campus. There, I used a tool named Packet Tracer. 
+                </p>&nbsp;
+            </div>
+            <div class="software">
+                <h3>Soft Skills</h3>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Problem-solving</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Active Listener</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Effective Communicator,</span></i><br> 
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Quick Learner</span></i><br>  
+                </ul>&nbsp;
+            </div>
+            <div class="project">
+                <h3>Mini Project</h3>&nbsp;<br>
+                <h4>2-D Game Application</h4><br>
+                <p>Developed a 2-D Game Application called (CONNECT-4) with the help of java swing package.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
