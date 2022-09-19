@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.2.0-web\css\all.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="html2pdf.bundle.min.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="download.js"></script>
+</head>
+<body>
+    <div class="save">
+        <button type="button" onclick="pdf()">Download</button>
+    </div>
+    <div class="hireme">
+        <button type="button">Hire Me</button>
+    </div>
+    <div class="container" id="resume">
+        <div class="left_side">
+            <div class="profile">
+                <div class="image">
+                    <img src="gary.jpg">
+                </div>
+                <h2>Gary Felix A<br><span>Web Developer</span></h2>
+            </div>
+            <div class="contact">&nbsp;
+                <h3>Contact Info</h3>&nbsp;
+                <div class="list">
+                <ul>
+                    <i class="fa-solid fa-envelope" style="color: blue;"><span style="color: black;">&nbsp;&nbsp;2k19cse020@kiot.ac.in</span></i>
+                </ul>
+                <ul>
+                    <a href="https://www.linkedin.com/signup"><i class="fa-brands fa-linkedin" style="color: blue;"><span style="color: black;">&nbsp;&nbsp;Gary Felix A</span></i></a>
+                </ul>
+                <ul>
+                    <i class="fa-solid fa-phone" style="color: blue;"><span style="color: black;">&nbsp;&nbsp;8667757706</span></i>
+                </ul>
+                <ul>
+                    <i class="fa-solid fa-location-dot" style="color: blue;"><span style="color: black;">&nbsp;&nbsp;Tamil Nadu, India</span></i>
+                </ul>&nbsp;
+                </div>
+            </div>
+            <div class="objective">
+                <h3>Profile</h3>&nbsp;
+                    <p>I'm a fresher and I love to learn
+                    something new. I'll work based
+                    on what I've learned and make a
+                    profit for myself and the
+                    organization's goals.</p>
+            </div>&nbsp;
+            <div class="education">
+                <h3>Education</h3>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-graduation-cap" style="color: red;"><span style="color: black;">&nbsp;B.E., C.S.E.</span></i>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Knowledge Institute of Technology</span></i>
+                    <i class="fa-solid fa-arrow-right"><span style>&nbsp;8.5 CGPA till 5th Semester</span></i>
+                    <i class="fa-solid fa-arrow-right"><span style>&nbsp;2019-2023</span></i>                    
+                </ul>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-school" style="color: red;"><span style="color: black;">&nbsp;H.S.C.</span></i>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;St. John's MHSS</span></i>
+                    <i class="fa-solid fa-arrow-right"><span style>&nbsp;69.33%</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span style>&nbsp;2018-2019</span></i>                    
+                </ul>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-school" style="color: red;"><span style="color: black;">&nbsp;S.S.L.C.</span></i>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;St. John's MHSS</span></i>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;90.00%</span></i>&nbsp;<br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;2016-2017</span></i>&nbsp;
+                </ul>
+            </div>
+        </div>
+
+        <div class="right_side">
+            <div class="skills">
+                <h3>Skills</h3>&nbsp;
+                <ul>
+                    <i class="fa-brands fa-java"><span>&nbsp;Java Language</span></i><br>
+                    <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>
+                <ul>
+                <span>&copy;&nbsp;C Language</span><br>
+                <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>
+                <ul>
+                    <i class="fa-brands fa-html5"><span>&nbsp;HTML</span></i><br>
+                    <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>
+                <ul>
+                    <i class="fa-brands fa-css3-alt"><span>&nbsp;CSS</span></i><br>
+                    <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>
+                <ul>
+                    <i class="fa-brands fa-wordpress"><span>&nbsp;Content Writing</span></i><br>
+                    <i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-solid fa-star" style="font-size:12px;"></i><i class="fa-regular fa-star" style="font-size:12px;"></i>
+                </ul>&nbsp;
+            </div>
+            <div class="certificates">
+                <h3>Certificates</h3>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;HTML Essentials</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Introduction to Cybersecurity</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;SEO Foundations</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;SEO Strategies</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Introduction to Digital Marketing</span></i><br>
+                </ul>&nbsp;
+            </div>
+            <div class="internship">
+                <h3>Internship</h3><br>
+                <i class="fa-solid fa-arrow-right"><span style="text-transform:uppercase">&nbsp;Cisco Cybersecurity Internship</span></i><br><br>
+                <p>Completed a Cybersecurity Virtual Internship on making a
+                    Network Infrastructure for our
+                    College Campus. There, I used a tool named Packet Tracer. 
+                </p>&nbsp;
+            </div>
+            <div class="software">
+                <h3>Software Knowledge</h3>&nbsp;
+                <ul>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Google Analytics</span></i><br>
+                    <i class="fa-solid fa-arrow-right"><span>&nbsp;Google Search Console</span></i><br> 
+                </ul>&nbsp;
+            </div>
+            <div class="project">
+                <h3>Project</h3>&nbsp;<br>
+                <h4>Foftact dot com</h4><br>
+                <p>Designed a Website named foftact.com using Wordpress Application and partially writing tech related
+                    articles on my Website since 2020</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
