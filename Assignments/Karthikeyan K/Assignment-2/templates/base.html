@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- fontawesome CSS -->
+    <link href="static/fontawesome/css/all.css" rel="stylesheet">
+    <!-- own css -->
+    <link href="static/css/own.css" rel="stylesheet">
+
+    {% block head %} {% endblock %}
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <i class="fa-regular fa-comments" width="30" height="24"></i>
+                <span class="navbar-brand mb-0 h1">Customer Care Registery</span>
+            </a>
+        </div>
+
+        <div class="d-flex">
+            <a href="/login" class="unique">LOGIN</a>
+            <a href="/signup" class="unique">SIGNUP</a>
+            <a href="/about" class="unique">ABOUT</a>
+        </div>
+
+    </nav>
+
+    {% block body %} {% endblock %}
+
+
+
+</body>
+
+</html>

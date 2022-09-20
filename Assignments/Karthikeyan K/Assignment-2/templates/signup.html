@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+
+<title>Signup</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+<title>Sign Up</title>
+
+
+<style>
+    .total_body {
+        background-color:rgb(49, 141, 44);
+    }
+    
+    body{
+        background-color:rgb(49, 141, 44);
+
+    }
+
+    .own_anchor {
+        text-decoration: none;
+        margin-left: 5px;
+        color: white;
+    }
+
+    .own_anchor:hover {
+        color: yellow;
+    }
+    .navbar{
+    background-color:rgb(57, 57, 145);
+}
+</style>
+
+{% endblock %}
+
+
+
+<!-- Body -->
+{% block body %}
+
+
+<section class="h-100 h-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Sign Up</h3>
+
+                        <form class="px-md-2">
+
+                            <div class="form-outline mb-4">
+                                <input type="text" id="form3Example1q" class="form-control" />
+                                <label class="form-label" for="form3Example1q">First Name</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="text" id="form3Example1q" class="form-control" />
+                                <label class="form-label" for="form3Example1q">Last Name</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-5">
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="form3Example1q" class="form-control" />
+                                        <label class="form-label" for="form3Example1q">Email</label>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-5">
+
+                                    <select class="select">
+                                        <option value="1">Gender</option>
+                                        <option value="2">Female</option>
+                                        <option value="3">Male</option>
+                                        <option value="4">Other</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="password" id="form3Example1q" class="form-control" />
+                                <label class="form-label" for="form3Example1q">Password</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="password" id="form3Example1q" class="form-control" />
+                                <label class="form-label" for="form3Example1q">Confirm Password</label>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
