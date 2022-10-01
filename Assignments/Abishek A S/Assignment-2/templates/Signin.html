@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
-</head>
-<body>
-    
-</body>
-</html>
+{%extends "home.html"%}
+
+    {%block content%}
+    <h5>{{ text }}</h5>
+    <p>{{ messge }}</p>
+    <form  class="form"action="{{ url_for('addsignin') }}" method="post">
+        <h2>Sign in</h2>
+        <div class="inputbox">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email"required><br>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            Not a member?
+            <a href="/signup">Signup</a><br><br>
+            <button type="submit" class="btn">Sign in</button>
+        </div><br>
+    </form>
+    {%endblock%}

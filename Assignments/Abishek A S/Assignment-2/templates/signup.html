@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-</head>
-<body>
+{% extends  "home.html"%}
+
+    {%block content%}
+    <div class="container">
+        <form class="form" onsubmit="return valid()" action="{{ url_for('addsignup') }}" method="post">
+            <h2>Sign up</h2>
+            <div class="inputfield">
+            <label for="firstname">FirstName</label>
+            <input type="text" name="firstname" id="firstname" placeholder="John" required><br>
+            <label for="lastname">LastName</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Elton" required><br>
+            <label for="email">E-mail id</label>
+            <input type="email" name="email" id="email" placeholder="YourEmail@gmail.com" required><br>
+            <label for="mobile">Mobile-Number</label>
+            <input type="number" name="number" id="mobile" placeholder="10-digit Mobile Number" required><br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required><br>
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" name="confirmpassword" id="confirmpassword" required><br><br>
+            <button class="btn" type="submit">SignUp</button>
+            </div>
+        </form>
+    </div>
     
-</body>
-</html>
+    {%endblock%}
