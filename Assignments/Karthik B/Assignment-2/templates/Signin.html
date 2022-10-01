@@ -1,80 +1,172 @@
 {% extends 'base.html' %}
+
 {% block head %}
-
+    <title>SignIn</title>
 <style>
-
 .navbar{
-    background-color:rgb(57, 57, 145);
+    background-color:cadetblue;
+    color: black;
+    top: 0;
 }
-.own_anchor:hover {
-        color: yellow;
-    }
+
 body{
-        background-color: coral;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:rgba(150, 178, 221, 0.445); 
+}
+
+.container{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    top: 100px;
+    background: #1b1818;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent, #ff0000,#ff0000);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent, #ff0000,#ff0101);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
     }
-    .container{
-        background-color: white;
-        margin-left: 30%;
-        margin-top: 5%;
-        max-width: 500px;
-        min-height: 400px;
-        border: 10px white solid;
-        border-radius: 20px; ;
-        font-family:'Times New Roman', Times, serif;
-        font-size:x-large;
-        box-sizing: border-box;
-        text-decoration: dotted;
+    100%{
+        transform: rotate(360deg);
     }
-    .input input{
-        position: relative;
-        top: 20px;
-        left: 40px;
-        border-radius: 5px;
-       
-    }
-    .input label{
-        position: relative;
-        top: 20px;
-        left: 40px;
-    }
-    .input p{
-        position: relative;
-        top: 20px;
-        left: 40px;
-    }
-    .btn{
-        position: absolute;
-        top: 380px;
-        left: 600px;
-        background-color: rgb(48, 167, 84);
-        color: white;
-        border-radius: 7px;
-        font-size: large;
-    }
+}
+
+.form{
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: rgb(0, 0, 4);
+    padding: 50px 40px;
+    display: flex;
+    z-index: 10;
+}
+
+.form h2{
+    width: 100px;
+    font-size: 23px;
+    position: relative;
+    left: 120px;
+    color: #45f3ff;
+}
+
+.inputbox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+    color: rgb(255, 255, 255);
+    right: 80px;
+}
+
+.form .inputbox input{
+    position: relative;
+    width: 100%;
+    padding: 2px;
+    background: transparent;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.inputbox label{
+    position: relative;
+    right: 10px;
+    padding: 20px 10px 10px;
+    color: white;
+    font-size: 20px;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.btn{
+    color: white;
+    border: solid white 2px;
+}
+
+.btn:hover{
+    background-color: green;
+    color: white;
+}
+p{
+    color: #ff0000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    /* position: relative;
+    left: 40%;
+    top: 500px;
+ */
+    margin-left: 500px;
+    position: relative;
+    top: 570px;
+}
+h5{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    margin-left: 500px;
+    position: relative;
+    top: 100px;
+}
+
 
 </style>
-
 {% endblock head %}
 
-
-
 {% block body %}
+<h5>{{ txt }}</h5>
+<p>{{ msg }}</p>
 
 <div class="container">
-  <form action="#">
-      <div class="input">
+    <form  class="form"action="{{ url_for('addsignin') }}" method="post">
+      <h2>Sign in</h2>
+      <div class="inputbox">
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email"required><br>
+          <label for="cpass">Password</label><br>
+          <input type="password" id="cpass" name="cpass" required><br><br>
+          Not a member?
+          <a href="/signup">Signup</a><br><br>
+          <button type="submit" class="btn">Sign in</button>
+      </div><br>
+      <!-- <div class="input">
           <label for="email">Email</label><br>
           <input type="email" id="email" name="email"><br>
-          <label for="pass">Password</label><br>
-          <input type="password" id="pass" name="pass"><br><br>
-      
-              <button type="button" class="btn">Sign in</button>
-          <br><br>
-          <p>Not a member? &nbsp; <a href="/signup">Signup</a></p>
-          
-      </div>
-  </form>
-  
-</div>
+          <label for="cpass">Password</label><br>
+          <input type="password" id="cpass" name="cpass"><br><br>
+          <button type="submit" class="btn">Sign in</button>
+            <br>
+            <p>Not a member? &nbsp; <a href="/signup">Signup</a></p>
+            
+        </div> -->
+    </form>
+    
+  </div>
 
 {% endblock body %}

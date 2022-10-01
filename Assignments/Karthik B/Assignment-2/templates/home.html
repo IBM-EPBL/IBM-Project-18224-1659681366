@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+ <title>Home</title>
+
+ <style>
+    .navbar{
+        background-color: coral;
+        color: black;
+    }
+    h3{
+        color: rgba(2, 58, 55, 0.979);
+        font-family: cursive;
+        
+    }
+ </style>
+ 
+{% endblock head %}
+
+{% block body %}
+
+<h3>{{ msg }} {{ fname }}</h3>
+
+
+
+{% endblock body %}
