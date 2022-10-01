@@ -1,80 +1,53 @@
 {% extends 'base.html' %}
+
+
+<!-- head  -->
 {% block head %}
-<title>Login</title>
+<title>LOGIN</title>
+
 <style>
-
-.navbar{
-    background-color:rgb(57, 57, 145);
-}
-.own_anchor:hover {
-        color: yellow;
-    }
-body{
-        background-color: rgb(17, 149, 52);
-    }
-    .container{
-        background-color: white;
-        margin-left: 30%;
-        margin-top: 5%;
-        max-width: 500px;
-        min-height: 400px;
-        border: 10px white solid;
-        border-radius: 20px; ;
-        font-family:'Times New Roman', Times, serif;
-        font-size:x-large;
-        box-sizing: border-box;
-        text-decoration: dotted;
-    }
-    .input input{
-        position: relative;
-        top: 20px;
-        left: 40px;
-        border-radius: 5px;
-       
-    }
-    .input label{
-        position: relative;
-        top: 20px;
-        left: 40px;
-    }
-    .input p{
-        position: relative;
-        top: 20px;
-        left: 40px;
-    }
-    .btn{
-        position: absolute;
-        top: 380px;
-        left: 600px;
-        background-color: rgb(48, 167, 84);
-        color: white;
-        border-radius: 7px;
-        font-size: large;
+    .login {
+        margin: 30px 25px;
+        font-size: 1.5rem;
     }
 
+    .loginform{
+        border: 2px solid green;
+        width: 50%;
+        height: 50%;
+        margin: auto;
+    }
 </style>
 
-{% endblock head %}
+{% endblock %}
 
-
-
+<!-- body  -->
 {% block body %}
 
-<div class="container">
-  <form action="#">
-      <div class="input">
-          <label for="email">Email</label><br>
-          <input type="email" id="email" name="email"><br>
-          <label for="pass">Password</label><br>
-          <input type="password" id="pass" name="pass"><br><br>
-      
-              <button type="button" class="btn">Sign in</button>
-          <br><br>
-          <p>Not a member? &nbsp; <a href="/signup">Signup</a></p>
-          
-      </div>
-  </form>
-  
-</div>
 
-{% endblock body %}
+<section class="login">
+
+    
+
+    <div class="loginform">
+        <h2>LOGIN</h2>
+        <form action="/retrive" method="post">
+            <div>
+
+                <label for="email">EmailId:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div>
+                <input type="submit" value="LOGIN">
+            </div>
+        </form>
+    </div>
+
+</section>
+
+{% endblock %}

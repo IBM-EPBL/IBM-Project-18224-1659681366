@@ -1,25 +1,15 @@
 {% extends 'base.html' %}
 
 <!-- Head -->
-{% block head %}  
+{% block head %}
 
 <title>Customer Care Registry</title>
 
 <style>
-  .own_anchor{
-    text-decoration: none;
-    margin-left: 5px;
-    color: black;
-}
-
-.own_anchor:hover{
-    color: yellow;
-}
-
-.navbar{
-    background-color: darkgoldenrod;
-}
-
+    .index {
+        margin: 30px 25px;
+        font-size: 1.5rem;
+    }
 </style>
 
 {% endblock %}
@@ -27,8 +17,13 @@
 
 
 <!-- Body -->
-{% block body %} 
+{% block body %}
 
-<h3>Index Page</h3>
-<p>Customer Care Registry Project</p>
+<section class="index">
+    <h3>Index Page</h3>
+    
+    <h3>{{ msg }}</h3>
+</section>
+
+
 {% endblock %}

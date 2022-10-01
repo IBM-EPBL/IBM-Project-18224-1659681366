@@ -7,39 +7,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
-    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Bootstrap JS -->
-    <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
     <!-- fontawesome CSS -->
-    <link href="static/fontawesome/css/all.css" rel="stylesheet">
-    <!-- own css -->
-    <link href="static/css/own.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+            width: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            background-color: black;
+            align-items: center;
+            width: 100%;
+        }
+
+        .navbar i {
+            margin-left: 20px;
+            font-size: 25px;
+            color: white;
+        }
+
+        .navbar i:hover {
+            color: yellow;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            float: right;
+        }
+
+        .navbar ul li {
+            margin: 5px 15px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            padding: 7px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        .navbar ul li a:hover {
+            transition: 0.3s;
+            color: green;
+            background-color: white;
+        }
+
+        .topper {
+            background-color: black;
+            width: 100%;
+            align-items: center;
+            padding: 10px;
+        }
+        .topper a{
+            text-decoration: none;
+            color: white;
+            font-size: 1.3rem;
+        }
+    </style>
 
     {% block head %} {% endblock %}
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="topper">
+        <a href="/">Customer Care Registry</a>
+    </div>
 
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <i class="fa-regular fa-comments" width="30" height="24"></i>
-                <span class="navbar-brand mb-0 h1">Customer Care Registery</span>
-            </a>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div>
+                <a href="/">
+                    <i class="fa-regular fa-comments"></i>
+                </a>
+            </div>
 
-        <div class="d-flex">
-            <a href="/login" class="unique">LOGIN</a>
-            <a href="/signup" class="unique">SIGNUP</a>
-            <a href="/about" class="unique">ABOUT</a>
-        </div>
-
-    </nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/login">LOGIN</a></li>
+                <li><a href="/signup">SIGNUP</a></li>
+                <li><a href="/about">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
 
     {% block body %} {% endblock %}
-
-
 
 </body>
 
