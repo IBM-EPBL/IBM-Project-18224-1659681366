@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>SignUp</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .navbar{
+        background-color: rgb(255, 235, 52);
+        color: black;
+        top: 0;
+    }
+    body{
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #290b0b; 
+    }
+
+    .container{
+        position: relative;
+        width: 380px;
+        height: 800px;
+        top: 100px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .container::before{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 440px;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent, #ff0000,#ff0000);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 440px;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent, #ff0000,#ff0101);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.form{
+        display: flex;
+        position: absolute;
+        inset: 2px;
+        margin: 0;
+        height: 700px;
+        padding: 0;
+        z-index: 10;
+        background: rgb(14, 0, 0);
+        border-radius: 10px;
+        /* height: 1000px;
+        width: 800px; */
+    }
+
+h2{
+    width: 100px;
+    font-size: 23px;
+    margin-top: 30px;
+    position: relative;
+    left: 140px;
+    color: #45f3ff;
+}
+
+.inputfield{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 70px;
+    left: 40px;
+    color: rgb(255, 255, 255);
+    right: 10px;
+}
+.inputfield input{
+    position: relative;
+    width: 100%;
+    max-height: 100px;
+    padding: 2px;
+    right: 100px;
+    border: solid rgb(132, 213, 245) 4px;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.inputfield label{
+    position: relative;
+    right: 110px;
+    max-height:10px;
+    padding: 20px 10px 10px;
+    color: white;
+    font-size: 20px;
+}
+.btn{
+    color: white;
+    border: solid white 2px;
+    margin-left: auto;
+}
+
+.btn:hover{
+    background-color: blue;
+    color: white;
+}
+
+</style>
+{% endblock head %}
+
+{% block body %}
+<!-- <h2>Welcome to Customer Care Registry</h2> -->
+<h3>{{ msg }}</h3>
+<div class="container">
+    <form class="form" action="{{ url_for('addsignup') }}" method="post">
+        <h2>Sign up</h2>
+        <div class="inputfield">
+        <label for="fname">FirstName</label>
+        <input type="text" name="fname" id="fname"><br>
+        <label for="lname">LastName</label>
+        <input type="text" name="lname" id="lname"><br>
+        <label for="email">E-mail id</label>
+        <input type="text" name="email" id="email"><br>
+        <label for="mnum">Mobile-Number</label>
+        <input type="text" name="mnum" id="mnum"><br>
+        <label for="cpass">Password</label>
+        <input type="password" name="cpass" id="cpass"><br>
+        <label for="ccpass">Confirm Password</label>
+        <input type="password" name="ccpass" id="ccpass"><br><br>
+        <button class="btn" type="submit">SignUp</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock body %}
