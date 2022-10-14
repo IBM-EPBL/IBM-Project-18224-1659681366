@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://demo-kiot-customer-care.s3.jp-tok.cloud-object-storage.appdomain.cloud/style.css">
+    <title>Bucket</title>
+</head>
+<body>
+    <div class="head">
+    <h2>Object Images</h2>
+    </div>
+    {% for i in files or [] %}
+        <h5>File : {{i}}</h5>
+        <img src="https://demo-kiot-customer-care.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{i}}" width = "140px">
+    {% endfor %}
+</body>
+</html>
