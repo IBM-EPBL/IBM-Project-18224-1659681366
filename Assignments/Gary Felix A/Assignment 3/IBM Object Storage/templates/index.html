@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucket</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>IBM Object Storage</h2>
+        {% for row in files %}
+           <h3>{{row}} </h3>
+           <img src="https://customercare.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{row}}" width="150px"></td>
+        {% endfor %}
+     </div>
+  
+
+</body>
+</html>
