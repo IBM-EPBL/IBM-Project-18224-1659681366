@@ -6,8 +6,8 @@ from ibm_botocore.client import Config, ClientError
 # Current list avaiable at https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints
 COS_ENDPOINT = "https://s3.jp-tok.cloud-object-storage.appdomain.cloud"
 # eg "W00YixxxxxxxxxxMB-odB-2ySfTrFBIQQWanc--P3byk"
-COS_API_KEY_ID = "a42xSVrV_ZfS6eFbQg9wEDWJgeRnmyC86291kk2pg6YO"
-COS_INSTANCE_CRN = "crn:v1:bluemix:public:iam-identity::a/f00ce1f2bfdb4304a7cc3add45c10df4::serviceid:ServiceId-5705ffef-0d85-471b-8976-35e786dbcd5c"
+COS_API_KEY_ID = "woQWUbe5L17TQigzRjXOOZyOhnI6-XWGoe8XKB84CyA6"
+COS_INSTANCE_CRN = "crn:v1:bluemix:public:iam-identity::a/baf735ca71e04c5bb0bbcf550d3e9ba8::serviceid:ServiceId-5d2a616c-87e9-4b4b-a442-52308410a6c5"
 # eg "crn:v1:bluemix:public:cloud-object-storage:global:a/3bf0d9003xxxxxxxxxx1c3e97696b71c:d6f04d83-6c4f-4a62-a165-696756d63903::"
 #COS_ENDPOINT ="https://config.cloud-object-storage.cloud.ibm.com"
 #COS_API_KEY_ID ="woQWUbe5L17TQigzRjXOOZyOhnI6-XWGoe8XKB84CyA6"
