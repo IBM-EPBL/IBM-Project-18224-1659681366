@@ -1,6 +1,6 @@
 from flask import Flask,render_template
 import ibm_db
-conn =ibm_db.connect("DATABASE=bludb;HOSTNAME=0c77d6f2-5da9-48a9-81f8-86b520b87518.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=31198;SECURITY=SSL;UID=jjn09936;PWD=ktf1zAbeEEq0OBLl",'','')
+conn =ibm_db.connect("DATABASE=bludb;HOSTNAME=0c77d6f2-5da9-48a9-81f8-86b520b87518.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=31198;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=jjn09936;PWD=ktf1zAbeEEq0OBLl",'','')
 
 print(conn)
 print("connection successful...")
