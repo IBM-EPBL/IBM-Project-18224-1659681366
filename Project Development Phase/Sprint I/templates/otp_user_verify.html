@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+<!-- Page style -->
+<link rel="stylesheet" href="static/css/user_otp_verify.css">
+
+{% endblock %}
+
+
+
+<!-- Body -->
+{% block body %}
+
+<h4>{{ otpmsg }}</h4>
+
+<section id="otp">
+    <div class="right">
+        <div class="rightdiv">
+
+            <div class="lottie">
+                <lottie-player src="static/lottie/emailverify.json" background="transparent" speed="1"
+                style="width: 150px; height: 150px;" loop autoplay>
+            </lottie-player>
+            </div>
+
+            <h1><i class="fa-solid fa-key" style="font-size: 20px;"></i> &nbsp; Verify OTP ( USER )</h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, laborum? Lorem ipsum dolor sit amet.</p>
+
+            <form action="/userverify" method="post" onsubmit="return true">
+                <div>
+                    <input type="text" id="user_entered_otp" name="user_entered_otp" placeholder="Enter OTP Here">
+                </div>
+                <div>
+                    <button id="user_otp_verify_button"><i class="fa-solid fa-fingerprint"></i> Verify</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+
+<!--Disable this form-->
+<form action="/addsignupuser" method="post">
+    <input type="text" id="signup_user_username" name="signup_user_username" value="{{ full_name }}" placeholder="Full Name">
+
+    <input type="email" id="signup_user_email" name="signup_user_email" value="{{ cemail }}" placeholder="Enter Email">
+
+    <input type="number" id="signup_user_phone_number" name="signup_user_phone_number" value="{{ phone_number }}" placeholder="Enter Phone Number">
+
+    <input type="password" id="signup_user_password" name="signup_user_password" value="{{ password }}" placeholder="Enter Password">
+
+    <input type="password" id="signup_user_re_password" name="signup_user_re_password" value="{{ re_password }}" placeholder="Retype Password">
+
+    <button id="signup_button" type="submit"><i class="fa-solid fa-user-plus"></i> Resend Otp</button>
+</form>
+
+
+<style>
+
+    #signup_user_username{
+        display: none;
+    }
+    #signup_user_email{
+        display: none;
+    }
+    #signup_user_phone_number{
+        display: none;
+    }
+    #signup_user_password{
+        display: none;
+    }
+    #signup_user_re_password{
+        display: none;
+    }
+
+</style>
+
+{% endblock %}

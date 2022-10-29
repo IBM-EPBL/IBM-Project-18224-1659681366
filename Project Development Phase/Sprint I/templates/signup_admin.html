@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+
+<link rel="stylesheet" href="/static/css/signup_admin.css">
+
+{% endblock %}
+
+
+
+<!-- Body -->
+{% block body %}
+{{ msg }}
+
+<section id="signup">
+
+    <div class="left">
+        <div>
+            <h1><i class="fa-solid fa-user-plus"></i><br><br>Welcome !</h1>
+            <p style="text-align: justify;">We hope you find what you're looking for and that you enjoy your stay.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, fuga. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Impedit non nemo necessitatibus cupiditate nisi reprehenderit, suscipit
+                labore? Nam, obcaecati iste.</p>
+            <p>Take your time!</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="rightdiv">
+            <h1>ADMIN SIGNUP</h1>
+            <form action="/addsignupadmin" method="post" onsubmit="return true">
+                <div>
+                    <input type="text" id="signup_admin_username" name="signup_admin_username" placeholder="Full Name">
+                </div>
+                <div>
+                    <input type="email" id="signup_admin_email" name="signup_admin_email" placeholder="Enter Email">
+                </div>
+                <div>
+                    <input type="number" id="signup_admin_phone_number" name="signup_admin_phone_number" placeholder="Enter Phone Number">
+                </div>
+                <div>
+                    <input type="text" id="signup_admin_organization_name" name="signup_admin_organization_name" placeholder="Enter Organization Name">
+                </div>
+                <div>
+                    <input type="number" id="signup_admin_organization_employee" name="signup_admin_organization_employee" placeholder="Enter Organization Employee">
+                </div>
+                <div>
+                    <input type="text" id="signup_admin_organization_address" name="signup_admin_organization_address" placeholder="Enter Organization Address">
+                </div>
+                <div>
+                    <input type="password" id="signup_admin_password" name="signup_admin_password" placeholder="Enter Password">
+                </div>
+                <div>
+                    <input type="password" id="signup_admin_re_password" name="signup_admin_re_password" placeholder="Retype Password">
+                </div>
+                <div class="check_box">
+                    <input type="checkbox" onclick="show_pass()" style="width: 20px; height: 20px;">
+                    <p>Show Password </p>
+                </div>
+                <div>
+                    <button id="signup_button" type="submit"><i class="fa-solid fa-user-plus"></i> SIGNUP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}
