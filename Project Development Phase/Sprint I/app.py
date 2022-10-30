@@ -117,8 +117,7 @@ def addsignupuser():
             content = Content(
                 "text/plain", "The verification code is :"+str(rand))
             mail = Mail(from_email, to_email, subject, content)
-            sg = sendgrid.SendGridAPIClient(
-                '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')
+            sg = sendgrid.SendGridAPIClient('YOUR API KEY')
             response = sg.client.mail.send.post(request_body=mail.get())
 
     return render_template('otp_user_verify.html', cemail=cemail, full_name=full_name, phone_number=phone_number, password=password, re_password=re_password)
@@ -182,8 +181,7 @@ def addsignupadmin():
             subject = "Verification( ADMIN )"
             content = Content("text/plain", "The verification code is : "+str(rands))
             mail = Mail(from_email, to_email, subject, content)
-            sg = sendgrid.SendGridAPIClient(
-                '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')
+            sg = sendgrid.SendGridAPIClient('YOUR API KEY')
             response = sg.client.mail.send.post(request_body=mail.get())
 
     return render_template('otp_admin_verify.html', aemail=aemail, admin_full_name=admin_full_name, admin_phone_number=admin_phone_number, organization_name=organization_name, organization_emp=organization_emp, organization_address=organization_address, passwords=passwords, re_passwords=re_passwords)
