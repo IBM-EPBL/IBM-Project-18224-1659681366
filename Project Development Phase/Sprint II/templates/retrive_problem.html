@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+
+
+<title>Ticket Type</title>
+<!-- fontawesome icon link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+<!-- styles page -->
+<link rel="stylesheet" href="static/css/retrive_problem.css">
+
+
+{% endblock %}
+
+
+
+<!-- Body -->
+{% block body %}
+
+<div id="dis_this">
+    logintype:<input type="text" placeholder="LoginOrNot" id="logintype" value="{{ logintype }}">
+    loginemail:<input type="text" placeholder="LoginEmail" id="loginemail" value="{{ loginemail }}">
+</div>
+
+
+<div class="content">
+    <div class="title" style="margin-top: 10px; color: white;">
+        <h2>Choose the issue type</h2>
+        <i class="fa-solid fa-circle-down"
+            style="display: flex;justify-content: center; color: white;font-size: 40px;"></i>
+    </div>
+    <form action="/raiseticket" method="post">
+        <div class="type">
+            <select name="special" id="special">
+                {% for i in list %}
+                <option value="{{i[0]}}">{{i[0]}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="submit">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+<script>
+    var logintype = document.getElementById('logintype').value;
+    var loginemail = document.getElementById('loginemail').value;
+
+
+    var dash_user_anchor = document.getElementById('dash_user_anchor');
+    var dash_admin_anchor = document.getElementById('dash_admin_anchor');
+    var dash_agent_anchor = document.getElementById('dash_agent_anchor');
+    var login_anchor = document.getElementById('login_anchor');
+    var signup_anchor = document.getElementById('signup_anchor');
+    var profile_user_anchor = document.getElementById('profile_user_anchor');
+    var profile_admin_anchor = document.getElementById('profile_admin_anchor');
+    var profile_agent_anchor = document.getElementById('profile_agent_anchor');
+    var logout_anchor = document.getElementById('logout_anchor');
+
+
+    if (logintype == "user") {
+        dash_admin_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_admin_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+    }
+    else {
+        location.replace("/");
+    }
+
+</script>
+
+{% endblock %}

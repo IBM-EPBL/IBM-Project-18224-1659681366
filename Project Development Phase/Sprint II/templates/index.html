@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+<!-- Page style -->
+<link rel="stylesheet" href="static/css/index.css">
+
+<style>
+    #dis_this{
+        display: none;
+    }
+
+    header{
+        position: relative;
+    }
+</style>
+
+
+{% endblock %}
+
+<!-- Body -->
+{% block body %}
+
+<div id="dis_this">
+    logintype:<input type="text" id="logintype" value="{{ logintype }}">
+    loginemail:<input type="text" id="loginemail" value="{{ loginemail }}">
+</div>
+
+<div class="des">
+    <article>
+        <img src="/static/img/des-img.png" alt="slogan">
+        <p>All the queries are solved in an accurate manner and served for the Customers. So we are called as a
+            Sword in word.</p>
+    </article>
+</div>
+<div class="second-des">
+    <div class="sec-title">
+        <h3 style="font-family: 'Ubuntu', sans-serif;
+            text-transform: uppercase;
+            font-size: 30px;"><span style="color: red;"><i
+                    class="fa-sharp fa-solid fa-hashtag"></i></span>&nbsp;Connect through</h3>
+    </div>
+    <div class="wrapper-grid">
+        <div class="container">
+            <div class="banner-img"></div>
+            <img src="/static/img/knowledge.png" alt="banner-image" class="profile-img">
+            <h2 class="title" style="text-transform: uppercase;">knowledge Based</h2>
+            <p class="description" style="font-size: 20px;">The Solution is given based on the DIY(Do It Yourself)
+                mechanism</p>
+        </div>
+        <div class="container">
+            <div class="banner-img"></div>
+            <img src="/static/img/email1.png" alt="banner-image" class="profile-img">
+            <h2 class="title" style="text-transform: uppercase;">Email</h2>
+            <p class="description" style="font-size: 20px;">Using Email, you can connect to the Agent quickly</p>
+        </div>
+        <div class="container">
+            <div class="banner-img"></div>
+            <!-- <video class="video" width="320" height="240" controls>
+                    <source src="/static/video/Knowledge video.mp4" type="video/mp4">
+                </video> -->
+            <img src="/static/img/chatbot.png" alt="banner-image" class="profile-img">
+            <h2 class="title" style="text-transform: uppercase;">Chatbot</h2>
+            <p class="description" style="font-size: 20px;">Feeling difficult to connect with your Email? If yes,
+                then we have chatbot to give you quick responses</p>
+        </div>
+    </div>
+</div>
+<div class="third-des">
+    <h2 style="font-family: 'Ubuntu', sans-serif;"><span style="color: red;"><i
+                class="fa-sharp fa-solid fa-hashtag"></i></span>&nbsp;Our Exciting Features</h2>
+    <hr style="border-width: 10px; border: solid red;width: 50%;"><br>
+    <div class="wrapper-grid-2">
+        <div class="container-2-1">
+            <h2 class="title-2" style="text-transform: uppercase;color: black;">Automated Ticket Routing</h2>
+        </div>
+        <div class="container-2-2">
+            <h2 class="title-2" style="text-transform: uppercase;color: black;">24/7 Working</h2>
+        </div>
+        <div class="container-2-3">
+            <h2 class="title-2" style="text-transform: uppercase;color: black;">Quick Response to the Customers</h2>
+        </div>
+        <div class="container-2-4">
+            <h2 class="title-2" style="text-transform: uppercase;color: black;">Quality Content for Problems</h2>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container-3">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Omni Channels</h4>
+                <ul>
+                    <li><a href="#">knowledge base</a></li>
+                    <li><a href="#">email</a></li>
+                    <li><a href="#">chatbot</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Pricing</h4>
+                <ul>
+                    <li><a href="#">product pricing</a></li>
+                    <li><a href="#">yearly pricing</a></li>
+                    <li><a href="#">monthly pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Solution</h4>
+                <ul>
+                    <li><a href="#">Automated Routing</a></li>
+                    <li><a href="#">24/7 Working</a></li>
+                    <li><a href="#">Quick response</a></li>
+                    <li><a href="#">Quality content</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">contact us</a></li>
+                    <li><a href="#">terms and condition</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>join us</h4>
+                <ul>
+                    <li><a href="#">sign up</a></li>
+                    <li><a href="#">free trial</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <ul>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    var logintype = document.getElementById('logintype').value;
+    var loginemail = document.getElementById('loginemail').value;
+
+
+    var dash_user_anchor = document.getElementById('dash_user_anchor');
+    var dash_admin_anchor = document.getElementById('dash_admin_anchor');
+    var dash_agent_anchor = document.getElementById('dash_agent_anchor');
+    var login_anchor = document.getElementById('login_anchor');
+    var signup_anchor = document.getElementById('signup_anchor');
+    var profile_user_anchor = document.getElementById('profile_user_anchor');
+    var profile_admin_anchor = document.getElementById('profile_admin_anchor');
+    var profile_agent_anchor = document.getElementById('profile_agent_anchor');
+    var logout_anchor = document.getElementById('logout_anchor');
+
+    if(logintype=="user"){
+        dash_admin_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_admin_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+    }else if(logintype=="admin"){
+        dash_user_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_user_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+    }else if(logintype=="agent"){
+        dash_user_anchor.style.display = "none";
+        dash_admin_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_admin_anchor.style.display = "none";
+        profile_user_anchor.style.display = "none";
+    }
+    else{
+        dash_user_anchor.style.display = "none";
+        dash_admin_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        profile_user_anchor.style.display = "none";
+        profile_admin_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+        logout_anchor.style.display = "none";
+    }
+
+
+</script>
+
+
+
+{% endblock %}

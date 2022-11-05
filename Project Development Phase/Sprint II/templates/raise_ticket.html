@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+
+<title>Raise a Ticket</title>
+<!-- fontawesome icon link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+<!-- styles page -->
+<link rel="stylesheet" href="static/css/raise_ticket.css">
+
+
+{% endblock %}
+
+
+
+<!-- Body -->
+{% block body %}
+
+<div id="dis_this">
+    logintype:<input type="text" placeholder="LoginOrNot" id="logintype" value="{{ logintype }}">
+    loginemail:<input type="text" placeholder="LoginEmail" id="loginemail" value="{{ loginemail }}">
+</div>
+
+<section id="ticket">
+    <div class="title">
+        <h2>Ticketing Section</h2>
+        <hr>
+    </div>
+    <div class="content">
+        <h3>Problems faced</h3>
+        <div class="list">
+            <form action="/addticket" method="post" id="raise" >
+                <label for="">Name</label><br>
+                <input type="text"  name="name" id="name"><br>
+                <div class="email">
+                    <div class="email1">
+                        <label for="">FROM EMAIL:</label><br>
+                        <input type="email" value="{{ loginemail }}" name="cusemail" id="cusemail">
+                    </div>
+                </div>
+                <input type="text" value="{{ agentemail[0] }}" id="getemail" name="getemail">
+                <br><label for="">Describe your problem</label><br>
+                <button type="submit">Submit</button>
+            </form>
+            <textarea name="query" id="query" cols="50" rows="8" form="raise"></textarea><br>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    var logintype = document.getElementById('logintype').value;
+    var loginemail = document.getElementById('loginemail').value;
+
+
+    var dash_user_anchor = document.getElementById('dash_user_anchor');
+    var dash_admin_anchor = document.getElementById('dash_admin_anchor');
+    var dash_agent_anchor = document.getElementById('dash_agent_anchor');
+    var login_anchor = document.getElementById('login_anchor');
+    var signup_anchor = document.getElementById('signup_anchor');
+    var profile_user_anchor = document.getElementById('profile_user_anchor');
+    var profile_admin_anchor = document.getElementById('profile_admin_anchor');
+    var profile_agent_anchor = document.getElementById('profile_agent_anchor');
+    var logout_anchor = document.getElementById('logout_anchor');
+
+
+    if (logintype == "user") {
+        dash_admin_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_admin_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+    }
+    else {
+        location.replace("/");
+    }
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,240 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+
+<style>
+    #dis_this {
+        display: none;
+    }
+
+    #dash_user_anchor a{
+        pointer-events: none;
+        color: white;
+        padding: 8px 15px;
+        background-color: #1a9681;
+    }
+</style>
+
+<title>Dashboard</title>
+<!-- fontawesome icon link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+<!-- styles page -->
+<link rel="stylesheet" href="static/css/dashboard_user.css">
+
+{% endblock %}
+
+
+
+<!-- Body -->
+{% block body %}
+
+<div id="dis_this">
+    logintype:<input type="text" placeholder="LoginOrNot" id="logintype" value="{{ logintype }}">
+    loginemail:<input type="text" placeholder="LoginEmail" id="loginemail" value="{{ loginemail }}">
+</div>
+
+
+<div id="popup1">
+    <div class="bt">
+        <button onclick="document.getElementById('popup1').style.display='none'">❌</button>
+    </div>
+    <p id="paracontet"></p>
+</div>
+
+<section id="support">
+    <div class="background">
+        <span>
+            <h2>Get Support - 24/7</h2>
+            <hr>
+            <h2>Search for Solution&nbsp;<i class="fa-solid fa-lightbulb"></i></h2>
+            <hr>
+            <div class="bt">
+                <a href="/retriveproblem"><button class="bt-kbase">Raise a Ticket</button></a>
+                <a href="/templates/knowledge.html"><button class="bt-kbase">Knowledge Center</button></a>
+            </div>
+        </span>
+    </div>
+    <!-- box content - pop-up box -->
+    <div class="grid">
+        <div class="container-1">
+            <button onclick="clickme1()">What is Customer Care Registry?</button>
+        </div>
+        <div class="container-1">
+            <button onclick="clickme2()">24/7 Online Support</button>
+        </div>
+        <div class="container-1">
+            <button onclick="clickme3()">Automated Internal Routing</button>
+        </div>
+        <div class="container-1">
+            <button onclick="clickme4()">Quick Response</button>
+        </div>
+        <div class="container-1">
+            <button onclick="clickme5()">How to contact for support?</button>
+        </div>
+        <div class="container-1">
+            <button onclick="clickme6()">Support Channels</button>
+        </div>
+    </div>
+</section>
+<section id="FAQ">
+    <div class="title">
+        <h2 class="head">Frequently Asked Question</h2>
+        <hr>
+    </div>
+    <div class="content-title">
+        <a id="login">
+            <h3>Login issue</h3>
+        </a>
+        <a id="signup">
+            <h3>Signup issue</h3>
+        </a>
+    </div>
+    <div class="dropdown-login" id="dropdown-login" style="display: grid;">
+        <h2 id="drop"><i class="fa-solid fa-plus"></i>&nbsp;Oops! I forgot my account password!</h2>
+        <p id="description">
+            Have you forgotten your Customer Care Registry account password? If yes, then don't get panic. Click this
+            link <a href="#" style="color: red;">Forgot Password</a> to enter into the forgot password page. In that
+            page, you need to enter your existing Email ID. Once entering your Email ID, you'll be receiving the
+            password via Email.
+        </p>
+        <h2 id="drop2"><i class="fa-solid fa-plus"></i>&nbsp;I can't able to login to Customer Care Registry!</h2>
+        <p id="description2">
+            Are you troubling with logging in to Customer Care Registry application, If yes, then don't get panic. At
+            first, you must need to create an account in Customer Care Registry. For that, click this link to <a
+                href="#" style="color: red;">sign up</a> with Customer Care Registry. Once filling the required details
+            for the sign up process, you can be able to log in to Customer Care Registry without an error.
+        </p>
+    </div>
+    <div class="dropdown-signup" id="dropdown-signup" style="display: none;">
+        <h2 id="down1"><i class="fa-solid fa-plus"></i>&nbsp;How to signup with Customer Care Registry as a new user?
+        </h2>
+        <p id="description-s1">
+            In the landing page of the Customer Care Registry, you'll be able to view the sign up button. You need to
+            click that button to sign up with Customer Care Registry. There you need to give the required details. And
+            that's it, you have successfully created an account on Customer Care Registry.
+        </p>
+        <h2 id="down2"><i class="fa-solid fa-plus"></i>&nbsp;How to Verify Customer Care Registry account?
+        </h2>
+        <p id="description-s2">
+            Once making the sign up process, you'll be shown an OTP page. There you need to enter the OTP that is
+            received via Email to verify your Customer Care Registry account.
+        </p>
+    </div>
+</section>
+<footer>
+    <div class="container-3">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Omni Channels</h4>
+                <hr>
+                <ul>
+                    <li><a href="#">knowledge base</a></li>
+                    <li><a href="#">email</a></li>
+                    <li><a href="#">chatbot</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Pricing</h4>
+                <hr>
+                <ul>
+                    <li><a href="#">product pricing</a></li>
+                    <li><a href="#">yearly pricing</a></li>
+                    <li><a href="#">monthly pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Solution</h4>
+                <hr>
+                <ul>
+                    <li><a href="#">Automated Routing</a></li>
+                    <li><a href="#">24/7 Working</a></li>
+                    <li><a href="#">Quick response</a></li>
+                    <li><a href="#">Quality content</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <hr>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">contact us</a></li>
+                    <li><a href="#">terms and condition</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>join us</h4>
+                <hr>
+                <ul>
+                    <li><a href="#">sign up</a></li>
+                    <li><a href="#">free trial</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <hr>
+                <div class="social-links">
+                    <ul>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <h4>© customercareregistry.com | 2022</h4>
+    </div>
+</footer>
+<script src="static/js/dashboard_user.js"></script>
+
+
+<script>
+    var logintype = document.getElementById('logintype').value;
+    var loginemail = document.getElementById('loginemail').value;
+
+
+    var dash_user_anchor = document.getElementById('dash_user_anchor');
+    var dash_admin_anchor = document.getElementById('dash_admin_anchor');
+    var dash_agent_anchor = document.getElementById('dash_agent_anchor');
+    var login_anchor = document.getElementById('login_anchor');
+    var signup_anchor = document.getElementById('signup_anchor');
+    var profile_user_anchor = document.getElementById('profile_user_anchor');
+    var profile_admin_anchor = document.getElementById('profile_admin_anchor');
+    var profile_agent_anchor = document.getElementById('profile_agent_anchor');
+    var logout_anchor = document.getElementById('logout_anchor');
+
+
+    if (logintype == "user") {
+        dash_admin_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_admin_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+    }
+    else {
+        location.replace("/");
+    }
+
+</script>
+
+
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "2733340b-c63b-409f-8856-c51b04d4a0c1", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "3a769a78-cfe3-4ee1-8f78-ee03c9b67a3f", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+</script>
+
+{% endblock %}

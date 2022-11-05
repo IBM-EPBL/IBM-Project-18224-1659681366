@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Griffy&family=Oswald:wght@200&family=Playfair+Display&family=Stick+No+Bills:wght@200&family=Ubuntu:wght@700&display=swap');
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0) url(/static/img/patternpad.png);
+}
+
+#ticket {
+    background-color: rgba(255, 255, 255, 0.875);
+    margin: auto;
+    width: 50%;
+    border-left: 2px solid green;
+    border-top: 2px solid green;
+    border-right: 2px solid green;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+#ticket h2 {
+    display: flex;
+    justify-content: center;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Playfair Display', serif;
+}
+
+#ticket .title hr {
+    width: 15%;
+    margin-top: -10px;
+    border: 0.5px solid red;
+}
+
+#ticket .content{
+    /* border: 2px solid blue; */
+    height: 80%;
+}
+
+#ticket .content h3{
+    display: flex;
+    justify-content: center;
+}
+
+#ticket .content .list{
+    padding: 10px 50px;
+}
+
+#ticket .content label{
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;;
+}
+
+#ticket .content input{
+    font-size: 15px;
+    margin: 6px 0px;
+    padding: 5px 6px;
+}
+
+#ticket .content select{
+    font-size: 15px;
+    margin: 6px 0px;
+    padding: 5px 3px;
+}
+
+#ticket .content textarea{
+    font-size: 15px;
+    margin: 6px 0px;
+    padding: 5px 3px;
+}
+
+#ticket .content .email{
+    display: flex;
+    /* border: 2px solid blueviolet; */
+}
+
+#ticket .content .email .email2{
+    position: absolute;
+    right: 20%;
+}
+
+
+#ticket .content button{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 6px 0px;
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    text-shadow: 1px 1px 3px white;
+    background-color: green;
+}
+
+#ticket .content button:hover{
+    cursor: pointer;
+}

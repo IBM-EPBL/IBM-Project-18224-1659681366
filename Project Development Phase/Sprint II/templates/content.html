@@ -1,0 +1,50 @@
+{% extends 'test.html' %}
+
+{% block head %} 
+
+<!-- styles page -->
+<link rel="stylesheet" href="/static/css/style/content.css">
+
+{% block header %}{% endblock %}
+
+
+
+{% endblock %}
+
+{% block body %}
+
+<!-- navbar content -->
+<section class="nav-content">
+    <div class="container">
+        <div class="content">
+            <div class="ticket">
+                <h3>Tickets</h3>
+            </div>
+        </div>
+        <div class="list">
+            <div class="list-content">
+                <a href="/">All tickets</a>
+            </div>
+            <div class="list-content">
+                <a href="/tickethandle">Tickets to handle</a>
+            </div>
+        </div>
+        <div class="list-3">
+            <h3>Status of Tickets</h3>
+            <div class="list-content-3">
+                <a href="/open">Open</a>
+            </div>
+            <div class="list-content-3">
+                <a href="/pending">Pending</a>
+            </div>
+            <div class="list-content-3">
+                <a href="/solved">Solved</a>
+            </div>
+        </div>
+    </div>
+    {% block bodier %} {% endblock %}
+</section>
+
+<script src="/static/js/admindashboard.js"></script>
+
+{% endblock %}

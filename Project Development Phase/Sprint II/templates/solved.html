@@ -1,0 +1,43 @@
+{% extends 'content.html' %}
+
+
+{% block header %}
+
+<link rel="stylesheet" href="/static/css/style/solved.css">
+
+{% endblock %}
+
+<!-- Solved page -->
+{% block bodier %}
+
+<div class="block">
+    <div class="title">
+        <h2>Solved Tickets</h2>
+    </div>
+    <div class="table">
+        <table class="c-table">
+            <thead>
+                <tr>
+                    <th scope="col">Requester</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Agent</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Last Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="data">Customer Care Registry</td>
+                    <td class="data">Start Working</td>
+                    <td class="data">Unassigned</td>
+                    <td class="data">Solved</td>
+                    <td class="data">Yesterday</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+{% endblock %}

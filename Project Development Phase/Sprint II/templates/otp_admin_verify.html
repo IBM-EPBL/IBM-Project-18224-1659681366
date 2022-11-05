@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+<!-- Page style -->
+<link rel="stylesheet" href="static/css/user_otp_verify.css">
+
+<style>
+    #none_this{
+        display: none;
+    }
+
+    #dash_admin_anchor,#dash_user_anchor,#dash_agent_anchor,#profile_user_anchor,#profile_admin_anchor,#profile_agent_anchor,#logout_anchor{
+        display: none;
+    }
+</style>
+
+{% endblock %}
+
+
+
+<!-- Body -->
+{% block body %}
+
+<h4 style="text-align: center; color:white; margin: 0px; padding: 0px;">{{ otpmsg }}</h4>
+
+<section id="otp">
+    <div class="right">
+        <div class="rightdiv">
+
+            <div class="lottie">
+                <lottie-player src="static/lottie/emailverify.json" background="transparent" speed="1"
+                    style="width: 150px; height: 150px;" loop autoplay>
+                </lottie-player>
+            </div>
+
+            <h1><i class="fa-solid fa-key" style="font-size: 20px;"></i> &nbsp; Verify OTP ( ADMIN )</h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, laborum? Lorem ipsum dolor sit amet.</p>
+
+            <form action="/adminverify" method="post" onsubmit="return true">
+                <div>
+                    <input type="text" id="user_entered_otp" name="user_entered_otp" placeholder="Enter OTP Here">
+                </div>
+                <div>
+                    <button id="user_otp_verify_button" type="submit"><i class="fa-solid fa-fingerprint"></i>
+                        Verify</button>
+                </div>
+            </form>
+
+            <!--Disable this form-->
+            <form action="/addsignupadmin" method="post">
+
+                <div>
+                    <button id="user_otp_verify_button" type="submit"><i class="fa-solid fa-repeat"></i> Resend OTP</button>
+                </div>
+
+                <div id="none_this">
+
+                    <input type="text" id="signup_admin_username" name="signup_admin_username"
+                        value="{{ admin_fullname }}" placeholder="Full Name">
+
+                    <input type="text" id="signup_admin_email" name="signup_admin_email" value="{{ admin_email }}"
+                        placeholder="Enter Email">
+
+                    <input type="text" id="signup_admin_phone_number" name="signup_admin_phone_number"
+                        value="{{ admin_phonenumber }}" placeholder="Enter Phone Number">
+
+                    <input type="text" id="signup_admin_organization_name" name="signup_admin_organization_name"
+                        value="{{ admin_organization_name }}" placeholder="Enter Organization Name">
+
+                    <input type="text" id="signup_admin_organization_employee"
+                        name="signup_admin_organization_employee" value="{{ admin_organization_emp }}"
+                        placeholder="Enter Organization Employee">
+
+                    <input type="text" id="signup_admin_organization_address" name="signup_admin_organization_address"
+                        value="{{ admin_organization_address }}" placeholder="Enter Organization Address">
+
+                    <input type="text" id="signup_admin_password" name="signup_admin_password"
+                        value="{{ admin_password }}" placeholder="Enter Password">
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Oswald:wght@200&family=Ubuntu:wght@700&display=swap');
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* mobile view */
+@media screen and (max-width:510px) {
+
+
+    #support .background {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 500px 410px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    #support h2 {
+        text-align: center;
+        padding-top: 15px;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #support .searchbar {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
+    #support .background hr {
+        width: 30%;
+        border: 0.5px solid rgb(255, 0, 0);
+        margin-top: -10px;
+    }
+
+    #support .searchbar input {
+        width: 70%;
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    #support .searchbar button {
+        font-size: 20px;
+        padding: 8px;
+        color: rgba(247, 245, 241, 0.812);
+        background-color: rgb(9, 9, 9);
+    }
+
+    #support .searchbar button:hover {
+        cursor: pointer;
+        color: rgba(0, 255, 4, 0.547);
+        border: 2px solid black;
+        background-color: rgb(0, 0, 0);
+        transition: all .5s;
+    }
+
+    #support .grid {
+        display: grid;
+        grid-gap: 20px;
+    }
+
+    #support .grid .container {
+        box-shadow: 2px 2px 2px 2px rgb(7, 48, 65);
+        margin: 0px 30px;
+        background-color: rgb(255, 228, 76);
+        text-align: center;
+    }
+
+    #support .grid .container:hover {
+        cursor: pointer;
+    }
+
+
+    #FAQ .head {
+        padding-top: 20px;
+        margin-top: 20px;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    #FAQ .content-title {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-title #login {
+        margin-right: 20px;
+    }
+
+    .content-title #signup {
+        margin-right: 20px;
+    }
+
+    #FAQ .content-title #login:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: all 1s ease-in;
+    }
+
+    #FAQ .content-title #signup:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: all 1s ease-in;
+    }
+
+    #FAQ .content-title a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Griffy', cursive;
+    }
+
+    #FAQ .title hr {
+        width: 45%;
+        border: 0.5px solid rgb(255, 0, 0);
+        margin-top: -10px;
+        margin-bottom: 30px;
+    }
+
+    .dropdown-login {
+        margin: 0 20px;
+        display: grid;
+        margin-bottom: 30px;
+        grid-gap: 30px;
+    }
+
+    .dropdown-login i {
+        color: red;
+    }
+
+    .dropdown-login h2 {
+        padding: 10px;
+        margin-bottom: 10px;
+        margin: 0px 0px;
+        box-shadow: 2px 2px 2px rgb(0, 0, 0), 0px 0px 3px rgb(0, 0, 0);
+        background-color: rgb(255, 228, 76);
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .dropdown-login p {
+        padding: 0px;
+        margin-left: 10px;
+    }
+
+    .dropdown-signup {
+        margin: 0 30px;
+        display: grid;
+        margin-bottom: 30px;
+        grid-gap: 30px;
+    }
+
+    .dropdown-signup i {
+        color: rgb(255, 0, 0);
+    }
+
+    .dropdown-signup h2 {
+        padding: 10px;
+        margin-bottom: 10px;
+        margin: 0px 0px;
+        box-shadow: 2px 2px 2px rgb(0, 0, 0), 0px 0px 3px rgb(0, 0, 0);
+        background-color: rgb(255, 228, 76);
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .dropdown-signup p {
+        padding: 0px;
+        margin-left: 10px;
+    }
+
+    #FAQ p {
+        font-size: 20px;
+    }
+
+    .container-3 {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.812);
+        margin: auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-col {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .footer-col h4 {
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    footer hr {
+        width: 10%;
+        border: 0.5px solid rgb(255, 0, 0);
+        margin-top: -20px;
+        margin-left: 0px;
+    }
+
+    .footer-col ul li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+        padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgb(0, 0, 0);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: white;
+        transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+        color: #ffffff;
+        background-color: rgb(255, 0, 0);
+    }
+
+    footer .copyright {
+        background-color: black;
+        height: 100%;
+        margin-top: -25px;
+    }
+
+    footer .copyright h4 {
+        color: white;
+        text-align: center;
+        height: 100%;
+        font-size: 20px;
+    }
+}
+
+/* tab view */
+@media screen and (min-width:510px) and (max-width:750px) {
+
+    #support h2 {
+        text-align: center;
+        padding-top: 15px;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #support .searchbar {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
+    #support .searchbar input {
+        width: 70%;
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    #support .searchbar button {
+        font-size: 20px;
+        padding: 8px;
+        color: rgba(247, 245, 241, 0.812);
+        background-color: rgb(9, 9, 9);
+    }
+
+    #support .searchbar button:hover {
+        cursor: pointer;
+        color: rgba(0, 255, 4, 0.547);
+        border: 2px solid black;
+        background-color: rgb(0, 0, 0);
+        transition: all .5s;
+    }
+
+    #support .background hr {
+        width: 20%;
+        border: 0.5px solid rgb(255, 0, 0);
+        margin-top: -10px;
+    }
+
+    #support .grid {
+        display: grid;
+        grid-gap: 20px;
+    }
+
+    #support .grid .container {
+        box-shadow: 2px 3px 2px 2px rgb(9, 46, 60);
+        margin: 0px 30px;
+        background-color: rgb(255, 228, 76);
+        text-align: center;
+    }
+
+    #support .grid .container:hover {
+        cursor: pointer;
+    }
+
+    #FAQ .head {
+        padding-top: 20px;
+        margin-top: 20px;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    #FAQ .content-title {
+        display: flex;
+    }
+
+    #FAQ .content-title #login:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: all 1s ease-in;
+    }
+
+    #FAQ .content-title #signup:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: all 1s ease-in;
+    }
+
+    #FAQ .content-title a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Griffy', cursive;
+    }
+
+    #FAQ .title hr {
+        width: 35%;
+        border: 0.5px solid rgb(255, 0, 0);
+        margin-top: -10px;
+        margin-bottom: 30px;
+    }
+
+    #FAQ .content-title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    #login {
+        margin-right: 20px;
+    }
+
+    #signup {
+        margin-left: 20px;
+    }
+
+    .dropdown-login {
+        margin: 0px 30px;
+        margin-bottom: 30px;
+        display: grid;
+        grid-gap: 30px;
+    }
+
+    .dropdown-login i {
+        color: red;
+    }
+
+    .dropdown-login h2 {
+        padding: 10px;
+        margin-bottom: 10px;
+        margin: 0px 0px;
+        box-shadow: 2px 2px 2px rgb(0, 0, 0), 0px 0px 3px rgb(0, 0, 0);
+        background-color: rgb(255, 228, 76);
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .dropdown-login p {
+        padding: 0px;
+        margin-left: 10px;
+    }
+
+    .dropdown-signup {
+        margin: 0px 30px;
+        display: grid;
+        grid-gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .dropdown-signup i {
+        color: rgb(255, 115, 0);
+    }
+
+    .dropdown-signup h2 {
+        padding: 10px;
+        margin-bottom: 10px;
+        margin: 0px 0px;
+        box-shadow: 2px 2px 2px rgb(0, 0, 0), 0px 0px 3px rgb(0, 0, 0);
+        background-color: rgb(255, 228, 76);
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .dropdown-signup p {
+        padding: 0px;
+        margin-left: 10px;
+    }
+
+    #FAQ p {
+        font-size: 20px;
+    }
+
+    .container-3 {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.812);
+        margin: auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-col {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .footer-col h4 {
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    footer hr {
+        width: 10%;
+        border: 0.5px solid rgb(255, 0, 0);
+        margin-top: -20px;
+        margin-left: 0px;
+    }
+
+    .footer-col ul li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+        padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgb(0, 0, 0);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: white;
+        transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+        color: #ffffff;
+        background-color: rgb(255, 0, 0);
+    }
+
+    footer .copyright {
+        background-color: black;
+        height: 100%;
+        margin-top: -25px;
+    }
+
+    footer .copyright h4 {
+        color: white;
+        text-align: center;
+        height: 100%;
+        font-size: 20px;
+    }
+}
+
+/* Desktop view */
+@media screen and (min-width:750px) {
+    #support .background {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 501px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    #support h2 {
+        text-align: center;
+        padding-top: 15px;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #support .bt {
+        display: flex;
+        justify-content: center;
+        margin: 30px 20px;
+    }
+
+    #support .bt .bt-login {
+        margin-right: 10px;
+        padding: 20px 20px;
+        font-size: 20px;
+        color: white;
+        border: transparent;
+        background-color: rgb(0, 123, 255);
+    }
+
+    #support .bt .bt-login:hover {
+        cursor: pointer;
+        background-color: rgb(2, 57, 153);
+        border: transparent;
+    }
+
+    #support .bt .bt-kbase {
+        margin-left: 10px;
+        padding: 20px 20px;
+        font-size: 20px;
+        color: white;
+        text-transform: uppercase;
+        border: transparent;
+        background-color: rgb(0, 123, 255);
+    }
+
+    #support .bt .bt-kbase:hover {
+        cursor: pointer;
+        background-color: rgb(2, 57, 153);
+        border: transparent;
+    }
+
+
+    #support .background hr {
+        width: 5%;
+        border: 0.5px solid rgb(255, 0, 0);
+        margin-top: -10px;
+    }
+
+    #support .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        margin: 0px 30px;
+    }
+
+    #support .grid .container-1{
+        width: 100%;
+        text-align: center;
+    }
+
+    #support .grid .container-1 button{
+        padding: 20px 40px;
+        font-size: 20px;
+        width: 100%;
+        box-shadow: 2px 6px 6px 2px rgb(7, 47, 73);
+        background-color: rgb(255, 228, 76);
+    }
+
+    #support .grid .container-1 button:hover{
+        cursor: pointer;
+    }
+
+    #popup1{
+        background-color: rgba(0, 15, 22, 0.867);
+        width: 50%;
+        height: 50%;
+        text-align: center;
+        position: fixed;
+        top: 30px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        margin: auto;
+        display: none;
+    }
+
+    #popup1 p{
+        color: white;
+        font-size: 20px;
+        text-align: justify;
+        padding: 0px 20px;
+    }
+
+    #popup1 .bt{
+        display: flex;
+        justify-content: right;
+    }
+
+    #popup1 .bt button{
+        background-color: black;
+        color: rgb(30, 255, 0);
+    }
+
+    #popup1 .bt button:hover{
+        cursor: pointer;
+    }
+
+    #FAQ {
+        margin-bottom: 20px;
+    }
+
+    #FAQ .head {
+        padding-top: 20px;
+        margin-top: 20px;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #FAQ .content-title {
+        display: flex;
+        justify-content: center;
+        margin: 0px 30px;
+    }
+
+    #FAQ .content-title #login:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: all 1s ease-in;
+    }
+
+    #FAQ .content-title #signup:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: all 1s ease-in;
+    }
+
+    #FAQ .content-title a {
+        text-decoration: none;
+        color: black;
+        margin-bottom: 20px;
+        font-family: 'Griffy', cursive;
+    }
+
+
+    #FAQ .title hr {
+        width: 15%;
+        border: 0.5px solid rgb(255, 0, 0);
+        margin-top: -10px;
+        margin-bottom: 30px;
+    }
+
+    #login {
+        margin-right: 20px;
+    }
+
+    #signup {
+        margin-left: 20px;
+    }
+
+    .dropdown-login {
+        margin: 0px 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .dropdown-login i {
+        color: rgb(4, 0, 250);
+    }
+
+    .dropdown-login h2 {
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        margin: 0px 0px;
+        box-shadow: 2px 4px 2px rgb(0, 0, 0), 0px 0px 3px rgb(0, 0, 0);
+        background-color: rgb(255, 228, 76);
+        cursor: pointer;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .dropdown-login p {
+        padding: 0px;
+        margin-left: 10px;
+    }
+
+    .dropdown-signup {
+        margin: 0px 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .dropdown-signup i {
+        color: rgb(255, 115, 0);
+    }
+
+    .dropdown-signup h2 {
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        margin: 0px 0px;
+        box-shadow: 2px 4px 2px rgb(0, 0, 0), 0px 0px 3px rgb(0, 0, 0);
+        background-color: rgb(255, 228, 76);
+        cursor: pointer;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .dropdown-signup p {
+        padding: 0px;
+        margin-left: 10px;
+    }
+
+    #FAQ p {
+        font-size: 20px;
+    }
+
+    .container-3 {
+        margin-top: 20px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.812);
+        margin: auto;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-col {
+        width: 25%;
+        padding: 0 15px;
+    }
+
+    .footer-col h4 {
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    footer hr {
+        width: 10%;
+        border: 0.5px solid rgb(255, 0, 0);
+        margin-top: -20px;
+        margin-left: 0px;
+    }
+
+    .footer-col ul li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+        padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgb(0, 0, 0);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: white;
+        transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+        color: #ffffff;
+        background-color: rgb(255, 0, 0);
+    }
+
+    footer .copyright {
+        background-color: black;
+        height: 100%;
+        margin-top: -25px;
+    }
+
+    footer .copyright h4 {
+        color: white;
+        text-align: center;
+        height: 100%;
+        font-size: 20px;
+    }
+
+}

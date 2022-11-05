@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Griffy&family=Oswald:wght@200&family=Ubuntu:wght@700&display=swap');
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Desktop view */
+@media screen and (min-width:750px){
+    .navbar{
+        display: block;
+        width: 65px;
+        height: 100%;
+        background-color: #232f3e;
+        position: fixed;
+        border-top-right-radius: 20px;
+    }
+
+    .navbar i{
+        display: flex;
+        justify-content: center;
+        color: white;
+        margin-bottom: 4px;
+    }
+
+    .navbar .icon img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .navbar a{
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-family: 'Stick No Bills', sans-serif;
+    }
+
+    .navbar .nav{
+        padding: 15px 0px;
+        cursor: pointer;
+    }
+
+    .navbar .nav:hover{
+        transition: .3s;
+        background-color: azure;
+        
+    }
+
+    .navbar .nav:hover a{
+        transition: .3s;
+        color: black;
+    }
+    
+    .navbar .nav:hover i{
+        transition: .3s;
+        color: black;
+    }
+
+}

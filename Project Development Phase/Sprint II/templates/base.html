@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="static/css/header.css">
+    <!-- Lottie Files -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    {% block head %} {% endblock %}
+</head>
+
+<body>
+
+    <!-- For PreLoader -->
+    <script>
+        $(window).on('load', setTimeout(function () {
+            $(".preloader").fadeOut(1000);
+            $(".content_page").fadeIn(1000);
+        }, 1000))
+    </script>
+
+
+    <div class="preloader">
+        <lottie-player src="static/lottie/loading.json" background="transparent" speed="2.5"
+            style="width: 50px; height: 50px;" loop autoplay>
+        </lottie-player>
+    </div>
+
+
+    <!-- Main Content-->
+    <section class="content_page">
+
+        <div class="message_landing_page">
+            <h3>We're open and available for takeaway & delivery.</h3>
+        </div>
+
+        <!-- HEADER-->
+        <header>
+            <nav>
+                <a href="/" style="text-decoration: none;">
+                    <div class="icons">
+                        <img src="/static/images/logo.png" alt="" width="50px" height="53px"
+                            style="filter: invert(100%);">
+                        <h3 style="font-weight: 500; padding-top: 5px;"> &nbsp;&nbsp;CUSTOMER CARE</h3>
+                    </div>
+                </a>
+                <ul>
+                    <li id="index_anchor"><a href="/">HOME</a></li>
+                    <li id="dash_user_anchor"><a href="/dashboarduser">DASHBOARD( USER )</a></li>
+                    <li id="dash_admin_anchor"><a href="/dashboardadmin">DASHBOARD( ADMIN )</a></li>
+                    <li id="dash_agent_anchor"><a href="/dashboardagent">DASHBOARD( AGENT )</a></li>
+                    <li id="login_anchor">
+                        <a>LOGIN</a>
+                        <div class="dropdown-content-login">
+                            <a href="/loginuser">USER</a>
+                            <a href="/loginadmin">ADMIN</a>
+                            <a href="/loginagent">AGENT</a>
+                        </div>
+                    </li>
+    
+                    <li id="signup_anchor">
+                        <a>SIGNUP</a>
+                        <div class="dropdown-content-signup">
+                            <a href="/signupuser">USER</a>
+                            <a href="/signupadmin">ADMIN</a>
+                        </div>
+                    </li>
+
+                    <li id="profile_user_anchor"><a href="#">PROFILE( USER )</a></li>
+                    <li id="profile_admin_anchor"><a href="#">PROFILE( ADMIN )</a></li>
+                    <li id="profile_agent_anchor"><a href="#">PROFILE( AGENT )</a></li>
+                    <li id="logout_anchor"><a href="/logout">LOGOUT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        {% block body %} {% endblock %}
+
+    </section>
+    
+    
+
+</body>
+
+</html>

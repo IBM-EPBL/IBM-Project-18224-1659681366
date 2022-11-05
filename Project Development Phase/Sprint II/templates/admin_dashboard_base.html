@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+
+<style>
+    #dis_this{
+        display: none;
+    }
+    #dash_admin_anchor a{
+        pointer-events: none;
+        color: white;
+        padding: 8px 15px;
+        background-color: #1a9681;
+    }
+</style>
+
+<!-- Styles page -->
+<link rel="stylesheet" href="static/css/admin_dashboard_base.css">
+
+{% block head_for_dash %} {% endblock %}
+
+
+{% endblock %}
+
+
+
+<!-- Body -->
+{% block body %}
+
+
+<div id="dis_this">
+    logintype:<input type="text" placeholder="LoginOrNot" id="logintype" value="{{ logintype }}">
+    loginemail:<input type="text" placeholder="LoginEmail" id="loginemail" value="{{ loginemail }}">
+</div>
+
+
+<!-- side navbar -->
+<section class="navbar">
+    <br>
+    <div class="nav">
+        <i class="fa-solid fa-ticket"></i>
+        <a href="#" id="active">Tickets</a>
+    </div>
+    <div class="nav">
+        <i class="fa-solid fa-user"></i>
+        <a href="#" id="active">Agents</a>
+    </div>
+    <div class="nav">
+        <i class="fa-solid fa-chart-line"></i>
+        <a href="#" id="active">Reports</a>
+    </div>
+</section>
+
+{% block body_for_dash %} {% endblock %}
+
+
+
+<script>
+    var logintype = document.getElementById('logintype').value;
+    var loginemail = document.getElementById('loginemail').value;
+
+
+    var dash_user_anchor = document.getElementById('dash_user_anchor');
+    var dash_admin_anchor = document.getElementById('dash_admin_anchor');
+    var dash_agent_anchor = document.getElementById('dash_agent_anchor');
+    var login_anchor = document.getElementById('login_anchor');
+    var signup_anchor = document.getElementById('signup_anchor');
+    var profile_user_anchor = document.getElementById('profile_user_anchor');
+    var profile_admin_anchor = document.getElementById('profile_admin_anchor');
+    var profile_agent_anchor = document.getElementById('profile_agent_anchor');
+    var logout_anchor = document.getElementById('logout_anchor');
+
+    if (logintype == "admin") {
+        dash_user_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_user_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+    }
+    else {
+        location.replace("/");
+    }
+
+</script>
+
+
+
+
+{% endblock %}

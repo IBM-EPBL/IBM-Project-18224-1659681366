@@ -1,0 +1,85 @@
+.nav-content{
+    display: flex;
+    margin-left: 4%;
+    height: 100%;
+    border: 2px solid blue;
+    border-top-left-radius: 20px;
+}
+
+.nav-content .container{
+    display: inline-block;
+    height: 100%;
+    padding-right: 30px;
+    width: 200px;
+    background-color: rgba(128, 128, 128, 0.089);
+}
+
+.nav-content .content{
+    text-align: center;
+}
+
+.nav-content .ticket{
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.nav-content .list{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.nav-content .list .list-content{
+    padding: 8px 0px;
+}
+.nav-content .list a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.nav-content .list a:hover{
+    padding-left: 10px;
+    transition: all .5s;
+}
+.nav-content .list-2{
+    margin-left: 10px;
+}
+
+.nav-content .list-2 .list-content-2{
+    padding: 8px 0px;
+}
+
+.nav-content .list-2 h3{
+    opacity: 0.6;
+    color: blue;
+}
+
+.nav-content .list-2 a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.nav-content .list-3{
+    margin-left: 10px;
+}
+
+.nav-content .list-3 .list-content-3{
+    padding: 10px 0px;
+}
+
+.nav-content .list-3 h3{
+    opacity: 0.6;
+    color: blue;
+
+}
+.nav-content .list-3 a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.nav-content .list-3 a:hover{
+    padding-left: 10px;
+    transition: all .5s;
+}
