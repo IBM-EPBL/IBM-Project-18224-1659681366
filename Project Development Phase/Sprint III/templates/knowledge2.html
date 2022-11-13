@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base</title>
+    <!-- styles page -->
+    <link rel="stylesheet" href="/static/css/knowledge2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Knowledge Base Articles</h2>
+            <hr>
+        </div>
+        <div class="content">
+            <div class="forms">
+                <form action="/addknowledge" method="post" id="knowledgeforms">
+                    <div class="input-grp">
+                        <input type="text" name="issue" id="issue">
+                        <label>Enter the Issue Type</label>
+                    </div>
+                    <div class="input-grp">
+                        <input type="text" name="title" id="title">
+                        <label>Title of the issue</label>
+                    </div>
+                    <div class="input-grp">
+                        <textarea name="solution" id="solution" form="knowledgeforms"></textarea>
+                        <label>Solution to the problem</label>
+                    </div>
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

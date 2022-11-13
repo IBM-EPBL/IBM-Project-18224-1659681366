@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Based</title>
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="static/css/fontawesome/css/all.css">
+    <!-- styles page -->
+    <link rel="stylesheet" href="/static/css/knowledge.css">
+    <!-- fontawesome icon web link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/static/img/dashboard - logo1.png">
+
+</head>
+
+<body>
+    <!-- middle content -->
+    <section id="middle">
+        <h2>Knowledge Base - Content Articles</h2>
+        <hr>
+
+        <!-- {% for j in issuelist %}
+        <h4>{{j}}</h4>
+        {% endfor %} -->
+        <h3>{{issuelist[0]}} </h3>
+        {% for i in list %}
+                {% if issuelist[0] == i[0] %}
+        <div class="grid">
+            <div class="content">
+                <div class="list">
+                    <button id="getting">{{i[0]}}</button>
+                </div>
+                
+            </div>
+
+            <!-- getting started -->
+            <div class="container-1" id="getting-started">
+                <div class="list-2">
+                    <h3 id="drop1">{{i[1]}}</h3>
+                    <p id="description1">
+                        {{i[2]}}
+                    </p>
+                </div>
+                
+            </div>
+            
+        </div>
+                {% else %}
+                <div class="content">
+                    <div class="list">
+                        <button id="getting">{{i[0]}}</button>
+                    </div>
+                    
+                </div>
+
+                {% for i in list %}
+                    <!-- getting started -->
+            <div class="container-1" id="getting-started">
+                <div class="list-2">
+                    <h3 id="drop1">{{i[1]}}</h3>
+                    <p id="description1">
+                        {{i[2]}}
+                    </p>
+                </div>
+                
+            </div>
+                {% endfor %}
+
+                {% endif %}
+
+
+        {% endfor %}
+    </section>
+    <footer>
+        <div class="container-3">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Omni Channels</h4>
+                    <hr>
+                    <ul>
+                        <li><a href="#">knowledge base</a></li>
+                        <li><a href="#">email</a></li>
+                        <li><a href="#">chatbot</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Pricing</h4>
+                    <hr>
+                    <ul>
+                        <li><a href="#">product pricing</a></li>
+                        <li><a href="#">yearly pricing</a></li>
+                        <li><a href="#">monthly pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Solution</h4>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Automated Routing</a></li>
+                        <li><a href="#">24/7 Working</a></li>
+                        <li><a href="#">Quick response</a></li>
+                        <li><a href="#">Quality content</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <hr>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">contact us</a></li>
+                        <li><a href="#">terms and condition</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>join us</h4>
+                    <hr>
+                    <ul>
+                        <li><a href="#">sign up</a></li>
+                        <li><a href="#">free trial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <hr>
+                    <div class="social-links">
+                        <ul>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <h4>© customercareregistry.com | 2022</h4>
+        </div>
+    </footer>
+
+    <script src="/static/js/knowledge.js"></script>
+</body>
+
+</html>
