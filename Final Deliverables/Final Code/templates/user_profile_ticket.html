@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Tickets</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- styles page -->
+    <link rel="stylesheet" href="/static/css/user_profile_ticket.css">
+</head>
+
+<body>
+    <div class="message">
+        <div class="left">
+            <div class="header">
+                <a href="/userprofile" style="text-decoration: none;"><button><i class="fa-solid fa-arrow-left"></i>&nbsp;Back</button></a>
+                <h2>Ticket ID : {{ticket}}</h2>
+                <h3 style="text-align: right; padding-right: 20PX;  width: 300px;">Agent Name : {{agentname[0]}}</h3>
+                
+            </div>
+            <div class="center-content">
+                <h2 style="text-align: center;width: 100%;text-transform: uppercase;">Your Queries</h2>
+                
+                <div class="content">
+                    <div class="div">
+
+                        {% for i in qlist %}
+                        <div class="customer-para">
+                            <p>{{i[0]}}</p>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="textarea">
+                <h2 style="text-align: center;width: 100%;text-transform: uppercase;">Raise a Query again</h2>
+                <h3 style="text-align: center; width: 100%;">Created at : {{querydate[0]}}&nbsp;{{querytime[0]}}</h3>
+                <div class="reply">
+                    <textarea name="againquery" id="textarea" form="forms" placeholder="Enter message......"></textarea>
+                    <form action="/againquery" id="forms" method="post">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

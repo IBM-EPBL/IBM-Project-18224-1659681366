@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+<style>
+    #dis_this {
+        display: none;
+    }
+</style>
+
+<link rel="stylesheet" href="static/css/userprofile.css">
+
+
+{% endblock %}
+
+<!-- Body -->
+{% block body %}
+
+<div id="dis_this">
+    logintype:<input type="text" placeholder="LoginOrNot" id="logintype" value="{{ logintype }}">
+    loginemail:<input type="text" placeholder="LoginEmail" id="loginemail" value="{{ loginemail }}">
+</div>
+
+<div class="box">
+    <div class="left">
+        <div class="icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="title">
+            <h2>Customer Profile</h2>
+            <hr>
+        </div>
+        {% for i in list %}
+                
+        <div class="content">
+            <div class="content-1">
+                <h3>Name</h3>
+                <p>{{i[0]}}</p>
+            </div>
+            <hr>
+            <div class="content-2">
+                <h3>Email ID</h3>
+                <p>{{i[1]}}</p>
+            </div>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+    <div class="right">
+        <div class="right-title">
+            <h2>Ticket data</h2>
+            <hr>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Ticket ID</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for j in ticklist %}
+                <form action="/userprofileticket" method="post">
+                    <tr id="{{j[0]}}table_row">
+                        <td class="data">{{j[0]}}</td>
+                        <td class="data">{{j[1]}}</td>
+                        <button style="display: none;" type="submit" value="{{j[0]}}" name="ticket" id="{{j[0]}}btn"></button>
+                    </tr>
+                </form>
+
+                <script>
+                    document.getElementById('{{j[0]}}table_row').addEventListener("click",()=>{
+                        document.getElementById('{{j[0]}}btn').click();
+                    });
+                </script>
+
+                {% endfor %}
+            </tbody>
+        </table>
+        <p style="text-align: center; color: black;">{{msg}}</p>
+    </div>
+</div>
+
+
+<script>
+    var logintype = document.getElementById('logintype').value;
+    var loginemail = document.getElementById('loginemail').value;
+
+
+    var dash_user_anchor = document.getElementById('dash_user_anchor');
+    var dash_admin_anchor = document.getElementById('dash_admin_anchor');
+    var dash_agent_anchor = document.getElementById('dash_agent_anchor');
+    var login_anchor = document.getElementById('login_anchor');
+    var signup_anchor = document.getElementById('signup_anchor');
+    var profile_user_anchor = document.getElementById('profile_user_anchor');
+    var profile_admin_anchor = document.getElementById('profile_admin_anchor');
+    var profile_agent_anchor = document.getElementById('profile_agent_anchor');
+    var logout_anchor = document.getElementById('logout_anchor');
+
+
+    if (logintype == "user") {
+        dash_admin_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_admin_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+    }
+    else {
+        location.replace("/");
+    }
+
+</script>
+
+{% endblock %}

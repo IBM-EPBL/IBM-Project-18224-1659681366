@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+<style>
+    #dis_this {
+        display: none;
+    }
+</style>
+
+<link rel="stylesheet" href="/static/css/knowledge2.css">
+
+
+{% endblock %}
+
+<!-- Body -->
+{% block body %}
+
+
+<div id="dis_this">
+    logintype:<input type="text" placeholder="LoginOrNot" id="logintype" value="{{ logintype }}">
+    loginemail:<input type="text" placeholder="LoginEmail" id="loginemail" value="{{ loginemail }}">
+</div>
+
+
+<div class="container">
+    <div class="title">
+        <h2>Knowledge Base Articles</h2>
+        <hr>
+    </div>
+    <div class="content">
+        <div class="forms">
+            <form action="#">
+                <div class="input-grp">
+                    <input type="text">
+                    <label>Enter the Issue Type</label>
+                </div>
+                <div class="input-grp">
+                    <input type="text">
+                    <label>Title of the issue</label>
+                </div>
+                <div class="input-grp">
+                    <textarea></textarea>
+                    <label>Solution to the problem</label>
+                </div>
+                <button type="submit">Post</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var logintype = document.getElementById('logintype').value;
+    var loginemail = document.getElementById('loginemail').value;
+
+
+    var dash_user_anchor = document.getElementById('dash_user_anchor');
+    var dash_admin_anchor = document.getElementById('dash_admin_anchor');
+    var dash_agent_anchor = document.getElementById('dash_agent_anchor');
+    var login_anchor = document.getElementById('login_anchor');
+    var signup_anchor = document.getElementById('signup_anchor');
+    var profile_user_anchor = document.getElementById('profile_user_anchor');
+    var profile_admin_anchor = document.getElementById('profile_admin_anchor');
+    var profile_agent_anchor = document.getElementById('profile_agent_anchor');
+    var logout_anchor = document.getElementById('logout_anchor');
+
+    if (logintype == "admin") {
+        dash_user_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_user_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+    }
+    else {
+        location.replace("/");
+    }
+
+</script>
+
+{% endblock %}

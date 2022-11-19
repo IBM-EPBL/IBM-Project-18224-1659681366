@@ -1,0 +1,64 @@
+{% extends 'admin_dashboard_landing_base.html' %}
+
+
+{% block header %}
+
+<link rel="stylesheet" href="static/css/admin_alltickets.css">
+
+{% endblock %}
+
+<!-- All tickets page -->
+{% block bodier %}
+
+<div class="block">
+    <div class="title">
+        <h2>{{msg}}</h2>
+    </div>
+    <div class="table">
+        <table class="c-table">
+            <thead>
+                <tr>
+                    <th scope="col">Requester</th>
+                    <th scope="col">Requester Email</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Ticket ID</th>
+                    <th scope="col">Agent</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in list %}
+                <form action="/adminlistchat" method="post">
+                    <tr id="{{i[3]}}table_row">
+                        <td class="data">{{i[2]}}</td>
+                        <td class="data">{{i[0]}}</td>
+                        <td class="data" id="{{i[3]}}">{{i[1]}}</td>
+                        <td class="data">{{i[3]}}</td>
+                        <td class="data">{{i[4]}}</td>
+                        <td class="data">{{i[5]}}</td>
+                        <button style="display: none;" type="submit" value="{{i[3]}}" name="ticket" id="{{i[3]}}btn">{{i[0]}}</button>
+                    </tr>
+                </form>
+
+                <script>
+                    var sub = document.getElementById('{{i[3]}}');
+                    if (sub.innerHTML.length > 20) {
+                        sub.innerHTML = sub.innerHTML.substring(0, 20) + "...";
+                    }
+
+                    document.getElementById('{{i[3]}}table_row').addEventListener("click",()=>{
+                        document.getElementById('{{i[3]}}btn').click();
+                    });
+                </script>
+
+                {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+{% endblock %}

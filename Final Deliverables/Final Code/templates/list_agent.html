@@ -1,0 +1,72 @@
+{% extends 'admin_dashboard_base.html' %}
+
+<!-- Head -->
+{% block head_for_dash %}
+
+<link rel="stylesheet" href="static/css/list_agent.css">
+
+
+{% endblock %}
+
+
+
+<!-- body -->
+{% block body_for_dash %}
+
+
+
+
+
+<div class="block">
+    <div id="topper_head">
+        
+        <div id="topper_btn">
+            <form action="/newrole" style="display: flex;" id="agent_form" method="post">
+                <select name="email" id="email_select">
+                    {% for j in list %}
+                    <option value="{{j[1]}}">{{j[1]}}</option>
+                    {% endfor %}
+                </select>
+                <input type="text" placeholder="problem" name="problem">
+                <button id="secret_btn" type="submit">Assign new role</button>
+            </form>
+            <a href="/inviteagents" style="text-decoration: none;"><button id="secret_btn">Invite agent</button></a>
+        </div>
+    </div>
+    <div class="table">
+        <table class="c-table">
+            <thead>
+                <tr>
+                    <th scope="col">AGENT NAME</th>
+                    <th scope="col">AGENT EMAIL</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for i in list %}
+                <form action="/agentdetails" method="post">
+                    <tr id="{{i[1]}}table_row">
+                        <td class="data">{{i[0]}}</td>
+                        <td class="data">{{i[1]}}</td>
+                        <button style="display: none;" type="submit" value="{{i[1]}}" name="email" id="{{i[1]}}btn"></button>
+                    </tr>
+                </form>
+                <script>
+                    document.getElementById('{{i[1]}}table_row').addEventListener("click",()=>{
+                        document.getElementById('{{i[1]}}btn').click();
+                    });
+                </script>
+                {% endfor %}
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/reply.css">
+    <!-- fontawesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <div class="message">
+        <div class="left">
+            <div class="header">
+                <a href="/dashboardadmin" style="text-decoration: none;"> <button><i
+                            class="fa-solid fa-arrow-left"></i>&nbsp;Back</button> </a>
+                <h2>Ticket ID : {{ticket}}</h2>
+            </div>
+            <div class="center-content">
+                <div class="title">
+                    <h2 style="text-align: left;width: 100%;">Customer</h2>
+                    <h2 style="text-align: right;width: 100%;">Agent</h2>
+                </div>
+
+                {% for i in qlist %}
+
+                {% if i[1] in 'customer' %}
+                <div class="customer-para">
+                    <p>{{i[0]}}</p>
+                </div>
+                {% endif %}
+
+                {% if i[1] in 'agent' %}
+                <div class="agent-para">
+                    <p>{{i[0]}}</p>
+                </div>
+                {% endif %}
+
+                {% endfor %}
+
+
+            </div>
+            <div class="textarea">
+                <div class="reply">
+                    <textarea name="reply" id="textarea" form="forms" placeholder="Enter message......"></textarea>
+                    <form action="/addfulldata" id="forms" method="post">
+                        <div class="responses">
+                            <div class="status">
+                                <p>Status of ticket: </p><br><br>
+                                <select name="status" id="status">
+                                    <option value="pending">Pending</option>
+                                    <option value="open">Open</option>
+                                    <option value="solved">Solved</option>
+                                    <option value="closed">Closed</option>
+                                </select>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="r-head">
+                <h2>Details</h2>
+                <button><i class="fa-regular fa-trash-can"></i></button>
+            </div>
+            <div class="right-center">
+                <div class="ticket-info">
+                    <h3>Ticket info</h3>
+                    <p>Ticket ID : {{ticket}}</p>
+                    <p>status : {{status[0]}}</p>
+                    <P>CREATED AT:</P>
+                    <p>DATE : {{querydate[0]}}</p>
+                    <p>TIME : {{querytime[0]}}</p>
+                </div>
+            </div>
+
+            <div id="agentassign" style="margin-top: 20px; display: flex; justify-content: center;">
+                <div style="text-align: center;">
+                    <p style="text-align: center;"> Assign to AGENT</p>
+                    <form action="/updatedagent" method="post">
+                        <select name="updateagent" id="" style="padding: 10px; width: 170px;">
+                            {% for k in listemail %}
+                            <option value="{{k[0]}}">{{k[0]}}</option>
+                            {% endfor %}
+                        </select>
+                        <button type="submit">Assign</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var messages = "{{messages}}";
+        if (messages != "NotAssign") {
+            document.getElementById('agentassign').style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

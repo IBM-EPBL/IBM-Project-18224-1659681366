@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Passsword</title>
+    <style>
+        #topper{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #border{
+            border: 2px solid black;
+            padding: 30px 25px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #border h4{
+            margin: 5px 0px;
+            padding: 0px;
+        }
+        #border form{
+            margin-top: 30px;
+        }
+        #border form div{
+            margin-top: 10px;
+        }
+        #border form div input{
+           width: 230px;
+           padding: 10px 10px;
+        }
+        #border form button{
+            margin-top: 10px;
+            padding: 10px 18px;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="topper">
+        <div id="border">
+            <h4>{{msg}}</h4>
+            <form action="/newpass" method="post">
+                <div>
+                    <input type="text" name="otpverify" id="otpverify" placeholder="Enter-OTP">
+                </div>
+                <div>
+                    <input type="text" name="newpass" id="newpass" placeholder="Enter New Passsword">
+                </div>
+                <div>
+                    <input type="text" name="renewpass" id="renewpass" placeholder="Re-enter New Password"><br>
+                </div>
+                <button type="submit" value="{{who}}" name="who">Change Password</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+{% extends 'admin_dashboard_base.html' %}
+
+<!-- Head -->
+{% block head_for_dash %} 
+
+<!-- styles page -->
+<link rel="stylesheet" href="/static/css/admin_dashboard_landing_base.css">
+
+
+<style>
+    #getsinglemsg,#admin_handle_btn,#admin_open_btn,#admin_closed_btn,#admin_pending_btn,#admin_solved_btn,#admin_closed_btn{
+        display: none;
+    }
+</style>
+
+{% block header %}{% endblock %}
+
+{% endblock %}
+
+
+
+<!-- body -->
+{% block body_for_dash %}
+
+<!-- navbar content -->
+<section class="nav-content">
+    <div class="container">
+        <div class="content">
+            <div class="ticket">
+                <h3>Tickets</h3>
+            </div>
+        </div>
+        <div class="list">
+            <div class="list-content">
+                <a href="/dashboardadmin">All tickets</a>
+            </div>
+            <div class="list-content">
+                <form action="/adminsinglepage" method="post">
+                    <a href="#" id="admin_handle_anchor">Tickets to handle</a>
+                    <input type="text" name="getsinglemsg" id="getsinglemsg" value="handle">
+                    <button type="submit" id="admin_handle_btn"></button>
+                </form>
+            </div>
+        </div>
+        <div class="list-3">
+            <h3>Status of Tickets</h3>
+            <div class="list-content-3">
+                <form action="/adminsinglepage" method="post">
+                    <a href="#" id="admin_open_anchor">Open</a>
+                    <input type="text" name="getsinglemsg" id="getsinglemsg" value="open">
+                    <button type="submit" id="admin_open_btn"></button>
+                </form>
+            </div>
+            <div class="list-content-3">
+                <form action="/adminsinglepage" method="post">
+                    <a href="#" id="admin_pending_anchor">Pending</a>
+                    <input type="text" name="getsinglemsg" id="getsinglemsg" value="pending">
+                    <button type="submit" id="admin_pending_btn"></button>
+                </form>
+            </div>
+            <div class="list-content-3">
+                <form action="/adminsinglepage" method="post">
+                    <a href="#" id="admin_solved_anchor">Solved</a>
+                    <input type="text" name="getsinglemsg" id="getsinglemsg" value="solved">
+                    <button type="submit" id="admin_solved_btn"></button>
+                </form>
+            </div>
+            <div class="list-content-3">
+                <form action="/adminsinglepage" method="post">
+                    <a href="#" id="admin_closed_anchor">Closed</a>
+                    <input type="text" name="getsinglemsg" id="getsinglemsg" value="closed">
+                    <button type="submit" id="admin_closed_btn"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('admin_handle_anchor').addEventListener("click",()=>{
+            document.getElementById('admin_handle_btn').click();
+        });
+        document.getElementById('admin_open_anchor').addEventListener("click",()=>{
+            document.getElementById('admin_open_btn').click();
+        });
+        document.getElementById('admin_pending_anchor').addEventListener("click",()=>{
+            document.getElementById('admin_pending_btn').click();
+        });
+        document.getElementById('admin_solved_anchor').addEventListener("click",()=>{
+            document.getElementById('admin_solved_btn').click();
+        });
+        document.getElementById('admin_closed_anchor').addEventListener("click",()=>{
+            document.getElementById('admin_closed_btn').click();
+        });
+    </script>
+    {% block bodier %} {% endblock %}
+</section>  
+
+
+
+
+
+
+ {% endblock %}

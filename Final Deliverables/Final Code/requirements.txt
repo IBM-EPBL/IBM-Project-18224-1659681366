@@ -1,0 +1,7 @@
+flask
+Flask-Session
+ibm_db
+sendgrid
+matplotlib
+numpy
+mpld3

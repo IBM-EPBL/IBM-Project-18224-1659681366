@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget - Email</title>
+    <style>
+        html,body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #topper{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #topper div{
+            /* border: 2px solid red; */
+            padding: 10px;
+            text-align: center;
+        }
+        #topper button{
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+        }
+        #topper input{
+            padding: 15px 15px;
+            width: 250px;
+        }
+
+        #border{
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="topper">
+        <div id="border">
+            <h2>Forgot Password </h2>
+            <form action="/emailverfiy" method="post">
+                <div>
+                    <input type="text" name="foremail" id="foremail" placeholder="Email">
+                </div>
+                <div>
+                    <button type="submit" value="agent" name="who">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

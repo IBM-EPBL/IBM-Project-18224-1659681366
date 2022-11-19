@@ -1,0 +1,368 @@
+{% extends 'base.html' %}
+
+<!-- Head -->
+{% block head %}
+<style>
+    #dis_this {
+        display: none;
+    }
+
+</style>
+
+<link rel="stylesheet" href="/static/css/knowledge.css">
+
+
+{% endblock %}
+
+<!-- Body -->
+{% block body %}
+
+<div id="dis_this">
+    logintype:<input type="text" placeholder="LoginOrNot" id="logintype" value="{{ logintype }}">
+    loginemail:<input type="text" placeholder="LoginEmail" id="loginemail" value="{{ loginemail }}">
+</div>
+
+<!-- middle content -->
+<section id="middle">
+    <h2>Knowledge Base - Content Articles</h2>
+    <hr>
+    <div class="grid">
+        <div class="content">
+            <div class="list">
+                <button id="getting">Getting Started</button>
+            </div>
+            <div class="list">
+                <button id="email">Email</button>
+            </div>
+            <div class="list">
+                <button id="chatbot">Live Chat</button>
+            </div>
+            <div class="list">
+                <button id="guide">Customer Care Registry Guide</button>
+            </div>
+        </div>
+        <!-- getting started -->
+        <div class="container-1" id="getting-started">
+            <div class="list-2">
+                <h3 id="drop1">Unable to login to Customer Care Registry</h3>
+                <p id="description1">
+                    Are you troubling with logging in to Customer Care Registry application, If yes, then don't get panic. At first, you must need to create an account in Customer Care Registry. For that, click this link to sign up with Customer Care Registry. Once filling the required details for the sign up process, you can be able to log in to Customer Care Registry without an error.
+                </p>
+            </div>
+            <div class="list-2">
+                <h3 id="drop2">I forgot my Customer Care Registry account password</h3>
+                <p id="description2">
+                    Have you forgotten your Customer Care Registry account password? If yes, then don't get panic. Click this link Forgot Password to enter into the forgot password page. In that page, you need to enter your existing Email ID. Once entering your Email ID, you'll be receiving the password via Email.
+                </p>
+            </div>
+            <div class="list-2">
+                <h3 id="drop3">How to signup with Customer Care Registry as a new user?</h3>
+                <p id="description3">
+                    In the landing page of the Customer Care Registry, you'll be able to view the sign up button. You need to click that button to sign up with Customer Care Registry. There you need to give the required details. And that's it, you have successfully created an account on Customer Care Registry.
+                </p>
+            </div>
+            <div class="list-2">
+                <h3 id="drop4">How to Verify Customer Care Registry account?</h3>
+                <p id="description4">
+                    Once making the sign up process, you'll be shown an OTP page. There you need to enter the OTP that is received via Email to verify your Customer Care Registry account.
+                </p>
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="container-2" id="email-show">
+            <div class="list-3">
+                <h3 id="drop5">How to send Canned Responses?</h3>
+                <p id="description5">
+                    Once you logged in to your Agent account, in the response area, near textarea, you can be able to send the canned responses for the user.
+                </p>
+            </div>
+            <div class="list-3">
+                <h3 id="drop6">How to change the status of the Ticket?</h3>
+                <p id="description6">
+                    In the response area, at the bottom, near the description area, you can be able to view the dropdown box. In that, you can be able to fix the status of the ticket(open, pending, closed).
+                </p>
+            </div>
+        </div>
+        <!-- Chatbot -->
+        <div class="container-4" id="chat-show">
+            <div class="list-4">
+                <h3 id="drop7">Is Live Chat is available in the Customer Care Registry?</h3>
+                <p id="description7">
+                    Yes, Live Chat feature is available in Customer Care Registry. In that, you can able to chat and you'll receive instant responses with crystal clear quality.
+                </p>
+            </div>
+            <div class="list-4">
+                <h3 id="drop8">How fast the live chat works?</h3>
+                <p id="description8">
+                    While using Live chat, the user can able to send a query to the agent and the agent can able to send the responses instantly. It works 24/7.
+                </p>
+            </div>
+        </div>
+        <!-- Guide -->
+        <div class="container-5" id="guide-show">
+            <div class="list-5">
+                <h3 id="drop9">How to raise a ticket?</h3>
+                <p id="description9">
+                    Once you logged in to your Customer Care Registry account, you'll be redirected to the Customer dashboard. In that dashboard, you can raise a ticket by clicking the button named Raise a ticket. 
+                </p>
+            </div>
+            <div class="list-5">
+                <h3 id="drop10">How many channels does Customer Care Registry have?</h3>
+                <p id="description10">
+                    Customer Care Registry contains three omni channels. They are Live chat, Email, and finally Knowledge base articles. Using these three channels, the user can get the support quickly.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container-3">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Omni Channels</h4>
+                <hr>
+                <ul>
+                    <li><a>knowledge base</a></li>
+                    <li><a>email</a></li>
+                    <li><a>chatbot</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Pricing</h4>
+                <hr>
+                <ul>
+                    <li><a href="/commingsoon">product pricing</a></li>
+                    <li><a href="/commingsoon">yearly pricing</a></li>
+                    <li><a href="/commingsoon">monthly pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Solution</h4>
+                <hr>
+                <ul>
+                    <li><a href="/commingsoon">Automated Routing</a></li>
+                    <li><a href="/commingsoon">24/7 Working</a></li>
+                    <li><a href="/commingsoon">Quick response</a></li>
+                    <li><a href="/commingsoon">Quality content</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <hr>
+                <ul>
+                    <li><a href="/commingsoon">about us</a></li>
+                    <li><a href="/commingsoon">contact us</a></li>
+                    <li><a href="/commingsoon">terms and condition</a></li>
+                    <li><a href="/commingsoon">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>join us</h4>
+                <hr>
+                <ul>
+                    <li><a href="/signupuser">sign up</a></li>
+                    <li><a href="/commingsoon">free trial</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <hr>
+                <div class="social-links">
+                    <ul>
+                        <a href="/commingsoon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="/commingsoon"><i class="fab fa-twitter"></i></a>
+                        <a href="/commingsoon"><i class="fab fa-instagram"></i></a>
+                        <a href="/commingsoon"><i class="fab fa-linkedin-in"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <h4>© customercareregistry.com | 2022</h4>
+    </div>
+</footer>
+
+
+<script>
+    var logintype = document.getElementById('logintype').value;
+    var loginemail = document.getElementById('loginemail').value;
+
+
+    var dash_user_anchor = document.getElementById('dash_user_anchor');
+    var dash_admin_anchor = document.getElementById('dash_admin_anchor');
+    var dash_agent_anchor = document.getElementById('dash_agent_anchor');
+    var login_anchor = document.getElementById('login_anchor');
+    var signup_anchor = document.getElementById('signup_anchor');
+    var profile_user_anchor = document.getElementById('profile_user_anchor');
+    var profile_admin_anchor = document.getElementById('profile_admin_anchor');
+    var profile_agent_anchor = document.getElementById('profile_agent_anchor');
+    var logout_anchor = document.getElementById('logout_anchor');
+
+
+    if (logintype == "user") {
+        dash_admin_anchor.style.display = "none";
+        dash_agent_anchor.style.display = "none";
+        login_anchor.style.display = "none";
+        signup_anchor.style.display = "none";
+        profile_admin_anchor.style.display = "none";
+        profile_agent_anchor.style.display = "none";
+    }
+    else {
+        location.replace("/");
+    }
+
+</script>
+
+<script>
+    // getting started button
+document.getElementById('getting').addEventListener("click", () => {
+    document.getElementById('getting-started').style.display = "block";
+    document.getElementById('chat-show').style.display = "none";
+    document.getElementById('email-show').style.display = "none";
+    document.getElementById('guide-show').style.display = "none";
+})
+
+var i = 0;
+document.getElementById('drop1').addEventListener("click", () => {
+    if (i == 0) {
+        document.getElementById('description1').style.display = "block";
+        i = 1;
+    }
+    else {
+        document.getElementById('description1').style.display = "none";
+        i = 0;
+    }
+})
+var j = 0;
+document.getElementById('drop2').addEventListener("click", () => {
+    if (j == 0) {
+        document.getElementById('description2').style.display = "block";
+        j = 1;
+    }
+    else {
+        document.getElementById('description2').style.display = "none";
+        j = 0;
+    }
+})
+var k = 0;
+document.getElementById('drop3').addEventListener("click", () => {
+    if (k == 0) {
+        document.getElementById('description3').style.display = "block";
+        k = 1;
+    }
+    else {
+        document.getElementById('description3').style.display = "none";
+        k = 0;
+    }
+})
+var l = 0;
+document.getElementById('drop4').addEventListener("click", () => {
+    if (l == 0) {
+        document.getElementById('description4').style.display = "block";
+        l = 1;
+    }
+    else {
+        document.getElementById('description4').style.display = "none";
+        l = 0;
+    }
+})
+
+
+// email channel button
+document.getElementById('email').addEventListener("click", () => {
+    document.getElementById('email-show').style.display = "block";
+    document.getElementById('getting-started').style.display = "none";
+    document.getElementById('chat-show').style.display = "none";
+    document.getElementById('guide-show').style.display = "none";
+})
+
+var a = 0;
+document.getElementById('drop5').addEventListener("click", () => {
+    if (a == 0) {
+        document.getElementById('description5').style.display = "block";
+        a = 1;
+    }
+    else {
+        document.getElementById('description5').style.display = "none";
+        a = 0;
+    }
+})
+var b = 0;
+document.getElementById('drop6').addEventListener("click", () => {
+    if (b == 0) {
+        document.getElementById('description6').style.display = "block";
+        b = 1;
+    }
+    else {
+        document.getElementById('description6').style.display = "none";
+        b = 0;
+    }
+})
+
+// chatbot button
+document.getElementById('chatbot').addEventListener("click", () => {
+    document.getElementById('chat-show').style.display = "block";
+    document.getElementById('getting-started').style.display = "none";
+    document.getElementById('email-show').style.display = "none";
+    document.getElementById('guide-show').style.display = "none";
+})
+
+var a = 0;
+document.getElementById('drop7').addEventListener("click", () => {
+    if (a == 0) {
+        document.getElementById('description7').style.display = "block";
+        a = 1;
+    }
+    else {
+        document.getElementById('description7').style.display = "none";
+        a = 0;
+    }
+})
+var b = 0;
+document.getElementById('drop8').addEventListener("click", () => {
+    if (b == 0) {
+        document.getElementById('description8').style.display = "block";
+        b = 1;
+    }
+    else {
+        document.getElementById('description8').style.display = "none";
+        b = 0;
+    }
+})
+
+// guide channel button
+document.getElementById('guide').addEventListener("click", () => {
+    document.getElementById('guide-show').style.display = "block";
+    document.getElementById('chat-show').style.display = "none";
+    document.getElementById('getting-started').style.display = "none";
+    document.getElementById('email-show').style.display = "none";
+})
+
+var a = 0;
+document.getElementById('drop9').addEventListener("click", () => {
+    if (a == 0) {
+        document.getElementById('description9').style.display = "block";
+        a = 1;
+    }
+    else {
+        document.getElementById('description9').style.display = "none";
+        a = 0;
+    }
+})
+var b = 0;
+document.getElementById('drop10').addEventListener("click", () => {
+    if (b == 0) {
+        document.getElementById('description10').style.display = "block";
+        b = 1;
+    }
+    else {
+        document.getElementById('description10').style.display = "none";
+        b = 0;
+    }
+})
+</script>
+
+{% endblock %}
+
+

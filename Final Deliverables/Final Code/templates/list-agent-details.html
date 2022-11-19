@@ -1,0 +1,50 @@
+{% extends 'admin_dashboard_base.html' %}
+
+<!-- Head -->
+{% block head_for_dash %}
+
+
+
+{% endblock %}
+
+
+
+<!-- body -->
+{% block body_for_dash %}
+
+<div style="margin-left: 80px;">
+
+    <h2>AGENT DETAILS</h2>
+    {% for i in list %}
+
+    <h3>Agent Name : {{i[0]}}</h3>
+    <h4>Agent Email : {{i[1]}}</h4>
+    <h5>Agent Role : {{i[2]}}</h5>
+
+    {% endfor %}
+
+    <button onclick="execute_this()">Update Role</button>
+    <a href="/deleteagentrole"><button>Delete Role</button></a>
+
+    <div style="display: none;">
+        <form action="/updateproblem" method="post">
+            <input type="text" id="kkkl" name="role">
+            <button type="submit" id="click_this_this">submit</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function execute_this() {
+        let person = prompt("Please enter your update role");
+        if (person != null && person != "") {
+            document.getElementById('kkkl').value = person;
+            setTimeout(() => {
+                document.getElementById('click_this_this').click();
+            }, 1000);
+        }
+    }
+</script>
+
+
+{% endblock %}

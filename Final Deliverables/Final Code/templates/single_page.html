@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #center_it {
+            width: 100%;
+            height: 100vh;
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #insider {
+            border: 2px solid rgb(128, 77, 0);
+            border-radius: 10px;
+        }
+
+        #sider {
+            width: 320px;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            /* border: 2px solid red; */
+        }
+
+        #sider h3 {
+            margin: 0px;
+            padding: 0px;
+            text-transform: uppercase;
+        }
+
+
+        .idiv {
+            margin: 1px;
+            padding: 5px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            background-color: rgb(128, 77, 0);
+        }
+
+        .idiv i {
+            font-size: 38px;
+            color: white;
+        }
+
+        .h3div {
+            margin-left: 5px;
+        }
+
+        #textal{
+            text-align: center;
+        }
+        #btn{
+            margin-top: 15px;
+        }
+        #btn button{
+            padding: 8px 20px;
+            text-transform: uppercase;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="center_it">
+        <div id="textal">
+
+            <div id="insider">
+
+                <div id="sider">
+
+                    <div class="idiv">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="h3div">
+                        <h3>{{message}}</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="btn">
+                <button id="count_btn" onclick="goback()">back(5)</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        var i = 5;
+        function count(){
+            document.getElementById('count_btn').innerHTML="back("+i+")";
+            i--;
+            if(i==0){
+                setTimeout(goback,1000);
+            }
+            else{
+                setTimeout(count,1000);
+            }
+        }
+        setTimeout(count,1000);
+
+
+        function goback() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>
